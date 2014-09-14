@@ -6,1488 +6,996 @@
 <meta name="author" content="DazeinCreative">
 <meta name="description" content="ORB - Powerfull and Massive Admin Dashboard Template with tonns of useful features">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ORB | Documentation</title>
+<title>ORB</title>
 <link href="css/styles.css" rel="stylesheet" type="text/css">
+
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 <script type="text/javascript" src="js/vendors/modernizr/modernizr.custom.js"></script>
 </head>
 
-<body id="powerwidgets">
-  <div class="dazein-logo"> <a href="http://themeforest.net/user/DazeinCreative/portfolio"><img src="images/dazein-logo.png" width="124" height="44" alt="Dazein" /></a> </div>
+<body>
 
-<div class="docs-page-menu">
-  <div class="docs-sidebar">
-    <ul class="nav nav-list docs-sidenav">
-      <li><a href="#thanks">Thanks</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#theme-contents">Theme Contents</a></li>
-      <li><a href="#page-structure">Page Structure</a></li>
-      <li><a href="#css">CSS</a></li>
-      <li><a href="#orb-widgets">ORB Widgets</a></li>
-      <li><a href="#color-code">Color Code</a></li>
-      <li><a href="#javascript">JavaScript</a></li>
-      <li><a href="#animation">Animation</a></li>
-      <li><a href="#forms">ORB Forms</a></li>
-      <li><a href="#megamenu">Megamenu <span class="badge bg-blue">New!</span></a></li>
-      <li><a href="#versionhistory">Version History</a></li>
-      <li><a href="#support">Support</a></li>
-    </ul>
-  </div>
-  
-  
-</div>
-<div class="docs-page-wrapper"> 
-  
-  <!--Top Block-->
-  <div class="doc-top-block">
-    <div class="doc-top-block-image"></div>
-    <h1>ORB</h1>
-    <h2>Documentation</h2>
-  </div>
-  <!--/Top Block--> 
-  <!--Bottom Block-->
-  <div class="doc-bottom-block">
-    <div class="page-header">
-      <h1 id="thanks">Thanks</h1>
+<!--Smooth Scroll-->
+<div class="smooth-overflow">
+<!--Navigation-->
+  <nav class="main-header clearfix" role="navigation"> <a class="navbar-brand" href="index.html"><span class="text-blue">ORB</span></a> 
+    
+    <!--Search-->
+    <div class="site-search">
+      <form action="#" id="inline-search">
+        <i class="fa fa-search"></i>
+        <input type="search" placeholder="Search">
+      </form>
     </div>
-    <p class="lead">Thank you for purchasing ORB. We hope that the development of your new project based on our theme will bring you joy and happiness. We are also hope that you appreciate our work and will continue to <a href="http://themeforest.net/user/DazeinCreative/portfolio">purchase our products</a> in future. Please do not forget to rate us in <a href="http://themeforest.net/downloads">downloads section on Themeforest</a></p>
-    <div class="page-header">
-      <h1 id="about">About</h1>
+    
+    <!--Navigation Itself-->
+    
+    <div class="navbar-content"> 
+      
+      <!--Sidebar Toggler--> 
+      <a href="#" class="btn btn-default left-toggler"><i class="fa fa-bars"></i></a> 
+      <!--Right Userbar Toggler--> 
+      <a href="#" class="btn btn-user right-toggler pull-right"><i class="entypo-vcard"></i> <span class="logged-as hidden-xs">Logged as</span><span class="logged-as-name hidden-xs">Anton Durant</span></a> 
+      <!--Fullscreen Trigger-->
+      <button type="button" class="btn btn-default hidden-xs pull-right" id="toggle-fullscreen"> <i class=" entypo-popup"></i> </button>
+      
+      <!--Settings Dropdown-->
+      <div class="btn-group pull-right">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <i class="entypo-cog"></i></button>
+        <div id="settings-dropdown" class="dropdown-menu keep_open orb-form">
+          <div class="dropdown-header">Settings <span class="badge pull-right">6</span></div>
+          <div class="dropdown-container">
+            <div class="nano">
+              <div class="nano-content">
+                <ul class="settings-dropdown">
+                  <li>
+                    <label class="toggle">
+                      <input type="checkbox" name="checkbox-toggle" checked>
+                      <i></i>Prevent Midnblow</label>
+                  </li>
+                  <li>
+                    <label class="toggle">
+                      <input type="checkbox" name="checkbox-toggle" checked>
+                      <i></i>Sleep All nights</label>
+                  </li>
+                  <li>
+                    <label class="toggle">
+                      <input type="checkbox" name="checkbox-toggle" checked>
+                      <i></i>Drink more Coffee</label>
+                  </li>
+                  <li>
+                    <label class="toggle">
+                      <input type="checkbox" name="checkbox-toggle" checked>
+                      <i></i>Auto feed cat</label>
+                  </li>
+                  <li>
+                    <label class="toggle">
+                      <input type="checkbox" name="checkbox-toggle" checked>
+                      <i></i>Dummy Checkbox</label>
+                  </li>
+                  <li>
+                    <label class="toggle">
+                      <input type="checkbox" name="checkbox-toggle" checked>
+                      <i></i>Read More Books</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-footer"> <a class="btn btn-dark" href="#">Save</a> </div>
+        </div>
+      </div>
+      
+      <!--Lock Screen--> 
+      <a href="#" data-toggle="modal" class="btn btn-default hidden-xs pull-right lockme"> <i class="entypo-lock"></i> </a> 
+      
+      <!--Notifications Dropdown-->
+      
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <i class="entypo-megaphone"></i><span class="new"></span></button>
+        <div id="notification-dropdown" class="dropdown-menu">
+          <div class="dropdown-header">Notifications <span class="badge pull-right">8</span></div>
+          <div class="dropdown-container">
+            <div class="nano">
+              <div class="nano-content">
+                <ul class="notification-dropdown">
+                  <li class="bg-warning"><a href="#"> <span class="notification-icon"><i class="fa fa-bolt"></i></span>
+                    <h4>Server Down</h4>
+                    <p>Server #435 was shut down (Power loss)</p>
+                    <span class="label label-default"><i class="entypo-clock"></i> 59 mins ago</span> </a> </li>
+                  <li class="bg-info"><a href="#"> <span class="notification-icon"><i class="fa fa-bolt"></i></span>
+                    <h4>Too Many Connections</h4>
+                    <p>Too many connections to Database Server</p>
+                    <span class="label label-default"><i class="entypo-clock"></i> 2 hours ago</span> </a> </li>
+                  <li class="bg-danger"><a href="#"> <span class="notification-icon"><i class="fa fa-android"></i></span>
+                    <h4>Sausage Stolen</h4>
+                    <p>Someone stole your hot sausage</p>
+                    <span class="label label-default"><i class="entypo-clock"></i> 3 hours ago</span> </a> </li>
+                  <li class="bg-success"><a href="#"> <span class="notification-icon"><i class="fa fa-bolt"></i></span>
+                    <h4>Defragmentation Completed</h4>
+                    <p>Disc Defragmentation Completed on Server</p>
+                    <span class="label label-default"><i class="entypo-clock"></i> 3 hours ago</span> </a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-footer"><a class="btn btn-dark" href="#">See All</a></div>
+        </div>
+      </div>
+      
+      <!--Inbox Dropdown-->
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="entypo-mail"></i><span class="new"></span></button>
+        <div id="inbox-dropdown" class="dropdown-menu inbox">
+          <div class="dropdown-header">Inbox <span class="badge pull-right">32</span></div>
+          <div class="dropdown-container">
+            <div class="nano">
+              <div class="nano-content">
+                <ul class="inbox-dropdown">
+                  <li><a href="#"> <span class="user-image"><img src="http://placehold.it/150x150" alt="Gluck Dorris" /></span>
+                    <h4>Why don't u answer calls?</h4>
+                    <p>Listen, dude, time is off. I'll find you soon! Sounds good?...</p>
+                    <span class="label label-default"><i class="entypo-clock"></i> 59 mins ago</span> <span class="delete"><i class="entypo-back"></i></span> </a> </li>
+                  <li><a href="#"> <span class="user-image"><img src="http://placehold.it/150x150" alt="Gluck Dorris" /></span>
+                    <h4>Rawrr, rawrrr...</h4>
+                    <p>Listen, dude, time is off. I'll find you soon! Sounds good?...</p>
+                    <span class="label label-default"><i class="entypo-clock"></i> 2 hours ago</span> <span class="delete"><i class="entypo-back"></i></span> </a> </li>
+                  <li><a href="#"> <span class="user-image"><img src="http://placehold.it/150x150" alt="Gluck Dorris" /></span>
+                    <h4>Why so serious?</h4>
+                    <p>Listen, dude, time is off. I'll find you soon! Sounds good?...</p>
+                    <span class="label label-default"><i class="entypo-clock"></i> 3 hours ago</span> <span class="delete"><i class="entypo-back"></i></span> </a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-footer"><a class="btn btn-dark" href="admin-inbox.html">Save All</a></div>
+        </div>
+      </div>
     </div>
-    <p>This template — is the original author's vision of how the admin dashboard should look like. Nice combination of colors, unobtrusive transitions, responsive design, code culture and unique features &#8212; that is all our ORB. Please note that ORB made for professionals who engage in creation CRM and CMS back-ends and require programming skills and deep (medium) knowledge in JS, CSS3, HTML and PHP. If you a novice in web-development ORB could be great starting point to code diggin and copy-paste style studying.</p>
-    <div class="page-header">
-      <h1 id="theme-contents">Theme Contents</h1>
-    </div>
-    <div class="tree well margin-0px">
-      <ul>
-        <li> <span><i class="fa fa-folder-open"></i> Parent</span>
-          <ul>
-            <li> <span><i class="fa fa-folder"></i> AJAX</span> &#8212; Contains Demo PHP Files for Widget AJAX Demo (<a href="../admin-widgets.html">Widget Page</a>)</li>
-            <li> <span><i class="fa fa-folder"></i> Fonts</span> &#8212; Contains Icon Fonts used in ORB</li>
-            <li> <span><i class="fa fa-folder"></i> CSS</span> &#8212; Contains main CSS file and customization CSS styles
-              <ul>
-                <li> <span><i class="fa fa-folder"></i> Vendors CSS </span> &#8212; All Vendors CSS</li>
-              </ul>
-            <li> <span><i class="fa fa-folder"></i> Images</span> &#8212; All Images
-              <ul>
-                <li> <span><i class="fa fa-folder"></i> Gallery</span> &#8212; <a href="../admin-gallery.html">Exclusive ORB Backgrounds</a></li>
-              </ul>
-            </li>
-            <li> <span><i class="fa fa-folder"></i> JS</span> &#8212; Contains All JS Files
-              <ul>
-                <li> <span><i class="fa fa-folder"></i> Vendors JS</span> &#8212; All Vendors JS (Described <a href="#javascript">Below</a>)</li>
+  </nav>
+  
+  <!--/Navigation--> 
+  
+  <!--MainWrapper-->
+  <div class="main-wrap"> 
+    
+    <!--OffCanvas Menu -->
+    <aside class="user-menu"> 
+      
+      <!-- Tabs -->
+      <div class="tabs-offcanvas">
+        <ul class="nav nav-tabs nav-justified">
+          <li class="active"><a href="#userbar-one" data-toggle="tab">Main</a></li>
+          <li><a href="#userbar-two" data-toggle="tab">Users</a></li>
+          <li><a href="#userbar-three" data-toggle="tab">ToDo</a></li>
+        </ul>
+        <div class="tab-content"> 
+          
+          <!--User Primary Panel-->
+          <div class="tab-pane active" id="userbar-one">
+            <div class="main-info">
+              <div class="user-img"><img src="http://placehold.it/150x150" alt="User Picture" /></div>
+              <h1>Anton Durant <small>Administrator</small></h1>
+            </div>
+            <div class="list-group"> <a href="#" class="list-group-item"><i class="fa fa-user"></i>Profile</a> <a href="#" class="list-group-item"><i class="fa fa-cog"></i>Settings</a> <a href="#" class="list-group-item"><i class="fa fa-flask"></i>Projects<span class="badge">2</span></a>
+              <div class="empthy"></div>
+              <a href="#" class="list-group-item"><i class="fa fa-refresh"></i>Updates<span class="badge">5</span></a> <a href="#" class="list-group-item"><i class="fa fa-comment"></i>Messages<span class="badge">12</span></a> <a href="#" class="list-group-item"><i class="fa fa-comments"></i> Comments<span class="badge">45</span></a>
+              <div class="empthy"></div>
+              <a href="#" data-toggle="modal" class="list-group-item lockme"><i class="fa fa-lock"></i> Lock</a> <a data-toggle="modal" href="#" class="list-group-item goaway"><i class="fa fa-power-off"></i> Sign Out</a> </div>
+          </div>
+          
+          <!--User Chat Panel-->
+          <div class="tab-pane" id="userbar-two">
+            <div class="chat-users-menu"> 
+              <!--Adding Some Scroll-->
+              <div class="nano">
+                <div class="nano-content">
+                  <div class="buttons">
+                    <div class="btn-group btn-group-xs">
+                      <button type="button" class="btn btn-default">Friends</button>
+                      <button type="button" class="btn btn-default">Work</button>
+                      <button type="button" class="btn btn-default">Girls</button>
+                    </div>
+                  </div>
+                  <ul>
+                    <li><a href="#"><span class="chat-name">Gluck Dorris</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span><span class="badge">5</span></a></li>
+                    <li><a href="#"><span class="chat-name">Anton Durant</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                    <li><a href="#"><span class="chat-name">Spiderman</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                    <li><a href="#"><span class="chat-name">Muchu</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-default">Offline</span></a></li>
+                    <li><a href="#"><span class="chat-name">Mr. Joker</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                    <li><a href="#"><span class="chat-name">Chewbacca</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                    <li><a href="#"><span class="chat-name">The Piggy</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                    <li><a href="#"><span class="chat-name">Anton Durant</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                    <li><a href="#"><span class="chat-name">Spiderman</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                    <li><a href="#"><span class="chat-name">Muchu</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                    <li><a href="#"><span class="chat-name">Anton Durant</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                    <li><a href="#"><span class="chat-name">Spiderman</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                    <li><a href="#"><span class="chat-name">Muchu</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                    <li><a href="#"><span class="chat-name">Anton Durant</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                    <li><a href="#"><span class="chat-name">Spiderman</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                    <li><a href="#"><span class="chat-name">Muchu</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                    <li><a href="#"><span class="chat-name">Anton Durant</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-default">Offline</span></a></li>
+                    <li><a href="#"><span class="chat-name">Spiderman</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                    <li><a href="#"><span class="chat-name">Muchu</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!--User Tasks Panel-->
+          <div class="tab-pane" id="userbar-three">
+            <div class="nano"> 
+              <!--Adding Some Scroll-->
+              <div class="nano-content">
+                <div class="small-todos">
+                  <div class="input-group input-group-sm">
+                    <input id="new-todo" placeholder="Add ToDo" type="text" class="form-control">
+                    <span class="input-group-btn">
+                    <button id="add-todo" class="btn btn-default" type="button"><i class="fa fa-plus-circle"></i></button>
+                    </span> </div>
+                  <section id="task-list">
+                    <ul id="todo-list">
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- /tabs --> 
+      
+    </aside>
+    <!-- /Offcanvas user menu--> 
+    
+    <!--Main Menu-->
+    <div class="responsive-admin-menu">
+      <div class="responsive-menu">ORB
+        <div class="menuicon"><i class="fa fa-angle-down"></i></div>
+      </div>
+      <ul id="menu">
+        <li><a class="active" href="index.html" title="Dashboard"><i class="entypo-briefcase"></i><span> Dashboard</span></a></li>
+        <li><a href="admin-inbox.html" title="Inbox"><i class="entypo-inbox"></i><span> Inbox <span class="badge">32</span></span></a></li>
+        <li><a class="submenu" href="#" title="Widgets" data-id="widgets-sub"><i class="entypo-rocket"></i><span> Widgets</span></a>
+          <ul id="widgets-sub">
+            <li><a href="admin-widgets.html" title="Power Widgets"><i class="entypo-rocket"></i><span> Power Widgets</span></a></li>
+            <li><a href="admin-portlets.html" title="Portlets"><i class="fa fa-square"></i><span> Portlets</span></a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="submenu" data-id="tables-sub" title="Tables"><i class="fa fa-table"></i><span> Tables</span></a> 
+          <!-- Tables Sub-Menu -->
+          <ul id="tables-sub" class="accordion">
+            <li><a href="admin-tables.html" title="Timeline"><i class="fa fa-table"></i><span> Tables</span></a></li>
+            <li><a href="admin-datatables.html" title="Profile"><i class="entypo-database"></i><span> Datatables</span></a></li>
+          </ul>
+        </li>
+        <li><a class="submenu" href="#" data-id="other-sub" title="Other Contents"><i class="fa fa-th"></i><span> Forms</span></a> 
+          <!-- Forms Sub-Menu -->
+          <ul id="other-sub" class="accordion">
+            <li><a href="admin-forms.html" title="Forms"><i class="fa fa-th"></i><span> Forms</span></a></li>
+            <li><a href="admin-forms-bootstrap.html" title="Bootstrap Forms"><i class="fa fa-table"></i><span> Bootstrap Forms</span></a></li>
+            <li><a href="admin-forms-plugins.html" title="Forms Plugins"><i class="fa fa-puzzle-piece"></i><span> Form Plugins</span></a></li>
+            <li><a href="admin-forms-validation.html" title="Forms Validation"><i class="fa fa-check-circle"></i><span> Form Validation</span></a></li>
+            <li><a href="admin-forms-wizard.html" title="Forms Wizard"><i class="fa fa-magic"></i><span> Form Wizard</span></a></li>
+          </ul>
+        <li> <a class="submenu" href="#" title="Graph &amp; Charts" data-id="graph-sub"><i class="entypo-chart-area"></i><span> Graph &amp; Charts</span></a> 
+          <!-- Graph and Charts Menu -->
+          <ul id="graph-sub" class="accordion">
+            <li><a href="admin-chart-morris.html" title="Video Gallery"><i class="entypo-chart-bar"></i><span> Morris Charts</span></a></li>
+            <li><a href="admin-chart-flot.html" title="Photo Gallery"><i class="entypo-chart-line"></i><span> Flot Charts</span></a></li>
+            <li><a href="admin-chart-others.html" title="Photo Gallery"><i class="entypo-chart-pie"></i><span> Others Charts</span></a></li>
+          </ul>
+        <li> <a class="submenu" href="#" data-id="interface-sub" title="Interface"><i class="entypo-palette"></i><span> Interface</span></a> 
+          <!-- Interface Sub-Menu -->
+          <ul id="interface-sub" class="accordion">
+            <li><a href="admin-typography.html" title="Typography"><i class="entypo-language"></i><span> Typography</span></a></li>
+            <li><a href="admin-nestable.html" title="Nestable"><i class="entypo-list-add"></i><span> Nestable</span></a></li>
+            <li><a href="admin-tree-view.html" title="Tree View"><i class="entypo-flow-tree"></i><span> Tree View</span></a></li>
+            <li><a href="admin-animation.html" title="Animation"><i class="entypo-cd"></i><span> Animation</span></a></li>
+            <li><a href="admin-components.html" title="Components"><i class="entypo-traffic-cone"></i><span> Components</span></a></li>
+            <li><a href="admin-elements.html" title="Elements"><i class="entypo-archive"></i><span> Elements</span></a></li>
+            <li><a href="admin-buttons.html" title="Items List"><i class="entypo-list"></i><span> Buttons</span></a></li>
+            <li><a href="#" data-id="fonts-sub" title="Icon Fonts" class="submenu"><i class="fa fa-heart"></i><span> Icons</span></a>
+              <ul id="fonts-sub">
+                <li><a href="admin-font-awesome.html" title="Awesome Font"><i class="fa fa-flag"></i><span> Awesome</span></a></li>
+                <li><a href="admin-font-glyphicons.html" title="Glyphicons"><i class="entypo-cancel-circled"></i><span> Glyphicons</span></a></li>
+                <li><a href="admin-font-entypo.html" title="Entypo"><i class="entypo-flag"></i><span> Entypo</span></a></li>
               </ul>
             </li>
           </ul>
         </li>
+        <li> <a class="submenu active" href="#" data-id="pages-sub" title="Pages"><i class="entypo-book"></i><span> Pages</span></a> 
+          <!-- Pages Sub-Menu -->
+          <ul id="pages-sub">
+            <li><a href="admin-megamenu.html" title="MegaMenu"><i class="entypo-menu"></i><span> MegaMenu <span class="badge">New!</span></span></a></li>
+          <li><a href="admin-timeline.html" title="Timeline"><i class="entypo-chart-bar"></i><span> Timeline</span></a></li>
+            <li><a href="admin-profile.html" title="Profile"><i class="entypo-user"></i><span> Profile</span></a></li>
+            <li><a href="admin-gallery.html" title="Gallery"><i class="entypo-picture"></i><span> Gallery</span></a></li>
+            <li><a href="admin-user-list.html" title="Items List"><i class="entypo-list"></i><span> Items List</span></a></li>
+            <li><a href="admin-pricelists.html" title="Pricelists"><i class="entypo-tag"></i><span> Pricelists</span></a></li>
+            <li><a href="admin-forum.html" title="Forum"><i class="entypo-comment"></i><span> Forum</span></a></li>
+            <li><a href="admin-chat.html" title="Chat"><i class="entypo-chat"></i><span> Chat</span></a></li>
+            <li><a href="admin-404.html" title="404"><i class="entypo-window"></i><span> 404 Error</span></a></li>
+            <li><a href="admin-404.html" title="500"><i class="entypo-window"></i><span> 500 Error</span></a></li>
+            <li><a href="admin-login.html" title="Login"><i class="entypo-vcard"></i><span> Login Page</span></a></li>
+            <li><a href="admin-clear.html" title="Clear Page"><i class="entypo-monitor"></i><span> Carte blanche</span></a></li>
+            <li><a href="admin-events.html" title="Events Calendar"><i class="entypo-calendar"></i><span> Calendar</span></a></li>
+            <li><a href="admin-search.html" title="Search Results"><i class="entypo-search"></i><span> Search Results</span></a></li>
+            <li><a href="admin-invoice.html" title="Invoice"><i class="entypo-box"></i><span> Invoice</span></a></li>
+          </ul>
+        </li>
+        <li> <a class="submenu" href="#" data-id="maps-sub" title="Maps"><i class="entypo-map"></i><span> Maps</span></a> 
+          <!-- Maps Sub-Menu -->
+          <ul id="maps-sub">
+            <li><a href="admin-maps-google.html" title="Google Maps"><i class="entypo-location"></i><span> Google Maps</span></a></li>
+            <li><a href="admin-maps-vector.html" title="Vector Maps"><i class="entypo-compass"></i><span> Vector Maps</span></a></li>
+          </ul>
+        </li>
+        
+        <!-- Other Contents Menu -->
+        <li><a href="#" title="Front End"><i class="entypo-cog"></i><span> Front End <span class="badge">Soon</span></span></a></li>
       </ul>
     </div>
-    <div class="page-header">
-      <h1 id="page-structure">Page Structure</h1>
-    </div>
-    <p>This is a ORB page layout. Logically page bodyconsist from two horizontal blocks - top navigation and main content wrapper. Main wrapper consist from three vertical blocks &#8211; left main site navigation, central content and userbar, that is hidden by default, so called off-canvas block. Let have closer look under the hood.</p>
-    <div class="cold-md-12"> <img class="img-responsive" src="images/live-layout.png" width="1388" height="788" alt="Live Layout" /> </div>
-    <h3>1. Top Navigation</h3>
-    <p>Top Navigation &#8212; contains. At left: logo block, menu trigger, notification, inbox dropdown. At right lock screen button, settings dropdown, fullscreen trigger and userbar trigger.</p>
-    <pre class="prettyprint linenums">
-&lt;!--Navigation--&gt;
-&lt;nav class="main-header clearfix" role="navigation"&gt;
-//Here comes the contents of top navbar//
-&lt;/nav&gt;
-&lt;!--/Navigation--&gt; 
-</pre>
-    <h3>2. Main Wrapper</h3>
-    <p>As we stated before Main Wrapper consist of three blocks. Here they are speaking HTML language. As you see &#8212; there is no any difficulties. Everything simple.</p>
-    <pre class="prettyprint linenums">
-&lt;!--MainWrapper--&gt;
-&lt;div class="main-wrap"&gt;
-
-&lt;!-- /Offcanvas user menu--&gt; 
-&lt;aside class="user-menu"&gt; 
-&lt;/aside&gt;
-&lt;!-- /Offcanvas user menu--&gt; 
-
-&lt;!--Main Menu--&gt;
-&lt;div class="responsive-admin-menu"&gt;
-&lt;/div&gt;
-&lt;!--/MainMenu--&gt;
-
-&lt;!--Content Wrapper--&gt;
-&lt;div class="content-wrapper"&gt;
-&lt;/div&gt;
-&lt;!--/Content Wrapper --&gt;
-
-&lt;/div&gt;
-&lt;!--/MainWrapper--&gt; 
-</pre>
-    <div class="cold-md-12"> <img class="img-responsive" src="images/layout.png" width="1388" height="788" alt="Layout" /> </div>
-    <div class="callout callout-danger"> Attentive buyer possible note the strange div that wrap all body content <code>&lt;div class="smooth-overflow"&gt;</code> What is it? That div solve the problem of laggy scrolling on IOS devices. </div>
-    <h3>3. Content Block</h3>
-    <p>Content Block from top to bottom consist from horizontal dropdown block with dummy data - sparklines charts, breadcrumb, page header and content block itself.</p>
-    <pre class="prettyprint linenums">
-&lt;!--Content Wrapper--&gt;
-&lt;div class="content-wrapper"&gt; 
-	&lt;div class="row"&gt; 
-	&lt;!--Main Row--&gt; 
-		&lt;!--Horisontal Dropdown--&gt;
-		&lt;nav class="cbp-hsmenu-wrapper" id="cbp-hsmenu-wrapper"&gt;
-		//Contents of horizontal dropdown//
-		&lt;/nav&gt;
-
-	    &lt;!--Breadcrumb--&gt;          
-		&lt;div class="breadcrumb clearfix"&gt;
-		//Contents of breadcrumbs//
-		&lt;/div&gt;
-		&lt;!--/Breadcrumb--&gt;
-            
-		&lt;div class="page-header"&gt;
-		&lt;h1&gt;Header&lt;small&gt;Example&lt;/small&gt;&lt;/h1&gt;
-		&lt;/div&gt;
-            
-		&lt;!-- Widget Row Start grid --&gt;
-		&lt;div class="row" id="powerwidgets"&gt; 
-		&lt;div class="col-md-12 bootstrap-grid"&gt; 
-		//Main Content - Widgets, Panels...
-		&lt;/div&gt;
-		&lt;!-- /Inner Row Col-md-12 --&gt;       
-		&lt;/div&gt;
-		&lt;!-- /Widgets Row End Grid--&gt; 
-            
-&lt;/div&gt;
-&lt;!-- / Content Wrapper --&gt; 
-</pre>
-    <div class="page-header">
-      <h1 id="css">CSS</h1>
-    </div>
-    <p>Shortlist of Cascading StyleSheets used in ORB Theme</p>
+    <!--/MainMenu-->
     
-    <table class="table">
-    <thead>
-  <tr>
-    <th>CSS</th>
-    <th>Purpose</th>
-    <th>Required for</th>
-    </tr>
-  </thead>
-  <tr>
-    <td><strong>Styles</strong> <span class="label label-default">style.css</span></td>
-    <td>Main StyleSheet File</td>
-    <td>Contains all styles for all pages</td>
-    </tr>
-  <tr>
-    <td><strong>Entypo</strong> <span class="label label-default">entypo.css</span></td>
-    <td>Entypo Icon Font</td>
-    <td>Displaying Entypo Icons</td>
-    </tr>
-  <tr>
-    <td><strong>FontAwesome</strong> <span class="label label-default">font-awesome.css</span></td>
-    <td>FontAwesome Icon Font</td>
-    <td>Displaying Font Awesome Icons</td>
-    </tr>
-  <tr>
-    <td><strong>Bootstrap</strong> <span class="label label-default">bootstrap.min.css</span></td>
-    <td>Main Bootstrap CSS File</td>
-    <td>Displaying BS Elements, Grid, etc.</td>
-  </tr>
-  <tr>
-    <td><strong>Megamenu</strong> <span class="label label-default">orbmm.css</span> <span class="badge bg-blue">New in 1.1</span></td>
-    <td>ORB MegaMenu</td>
-    <td>Displaying <a href="../admin-megamenu.html">MegaMenu</a></td>
-  </tr>
-  <tr>
-    <td colspan="3"><h4>Vendors CSS</h4></td>
-    </tr>
-  <tr>
-    <td><strong>Animate</strong> <span class="label label-default">animate.css</span></td>
-    <td>CSS3 Transitions and Animations </td>
-    <td>Modal Animations, Popover Animations, any other animations you want</td>
-  </tr>
-  <tr>
-    <td><strong>Datatables</strong> <span class="label label-default">datatables.css</span></td>
-    <td>Styles for Datatables</td>
-    <td>Displaying Datatables</td>
-  </tr>
-  <tr>
-    <td><strong>FullCalendar</strong> <span class="label label-default">fullcalendar.css</span></td>
-    <td>Fullcalendar CSS File</td>
-    <td>Displaying Calendar</td>
-  </tr>
-  <tr>
-    <td><strong>Steps Wizard</strong> <span class="label label-default">jquery.steps.css</span></td>
-    <td>Steps Form Wizard</td>
-    <td>Steps Form Wizard</td>
-  </tr>
-  <tr>
-    <td><strong>Summernote</strong> <span class="label label-default">summernote.css</span> and <span class="label label-default">summernote-bs3.css</span></td>
-    <td>Summernote Editor</td>
-    <td>Summernote WYSIWYG Editor </td>
-  </tr>
-  <tr>
-    <td><strong>X-Editable</strong> <span class="label label-default">address.css</span>, <span class="label label-default">bootstrap-editable.css</span>, <span class="label label-default">demo-bs3.css</span>, <span class="label label-default">select2.css</span>, <span class="label label-default">select2.css</span>, <span class="label label-default">select2-bootstrap.css</span>, <span class="label label-default">typeahead.js-bootstrap.css</span></td>
-    <td>Styles for correctly displaing styles using in X-Editable Form</td>
-    <td>X-Editables <small>Due to performance reasons we include these sryleshits only at</small> <code>admin-forms-plugins.html</code> <small>page</small></td>
-  </tr>
-  <tr>
-    <td colspan="3"><h4>Predefined Colors</h4></td>
-    </tr>
-  <tr>
-    <td><strong>Blue</strong> <span class="label label-default">styles-blue.css</span></td>
-    <td>Styling in Blue</td>
-    <td>Change visual style of ORB</td>
-  </tr>
-  <tr>
-    <td><strong>Brown</strong> <span class="label label-default">styles-brown.css</span></td>
-    <td>Styling in Brown</td>
-    <td>Change visual style of ORB</td>
-  </tr>
-  <tr>
-    <td><strong>Cherry</strong> <span class="label label-default">styles-cherry.css</span></td>
-    <td>Styling in Cherry</td>
-    <td>Change visual style of ORB</td>
-  </tr>
-  <tr>
-    <td><strong>Green</strong> <span class="label label-default">styles-green.css</span></td>
-    <td>Styling in Green</td>
-    <td>Change visual style of ORB</td>
-  </tr>
-  <tr>
-    <td><strong>Khaki</strong> <span class="label label-default">styles-khaki.css</span></td>
-    <td>Styling in Khaki</td>
-    <td>Change visual style of ORB</td>
-  </tr>
-  <tr>
-    <td><strong>Purple</strong> <span class="label label-default">styles-purple</span></td>
-    <td>Styling in Purple</td>
-    <td>Change visual style of ORB</td>
-  </tr>
-    </table>
-    <div class="callout callout-info">To change default color style overwrite contents the default style with styles from color you want to apply</div>
-
-    
-    <div class="page-header">
-      <h1 id="orb-widgets">ORB Widgets</h1>
-    </div>
-    <p>ORB Power Widgets is a heart of ORB. It is a <code>powerwidgets.js</code> and <code>powerwidgets.min.js</code> Widgets give user flexibility and full control over content organization. Generally, we have already take a look on ORB Widgets, their data-attributes and options. By now &#8212; take a look on advanced widget usage and options. Here is Javascript from <code>scripts.js</code> that covers all parametres of widget usage. </p>
-    <pre class="prettyprint linenums">
-if ($('#powerwidgets').length) {
-$('#powerwidgets').powerWidgets({
-   grid: '.bootstrap-grid',
-   widgets: '.powerwidget',
-   localStorage: true,
-   deleteSettingsKey: '#deletesettingskey-options',
-   settingsKeyLabel: 'Reset settings?',
-   deletePositionKey: '#deletepositionkey-options',
-   positionKeyLabel: 'Reset position?',
-   sortable: true,
-   buttonsHidden: false,
-   toggleButton: true,
-   toggleClass: 'fa fa-chevron-circle-up | fa fa-chevron-circle-down',
-   toggleSpeed: 200,
-   onToggle: function () {},
-   deleteButton: true,
-   deleteClass: 'fa fa-times-circle',
-   onDelete: function (widget) {
-      $('#delete-widget').modal(); // shows the modal
-      $(widget).addClass('deletethiswidget'); // ads an indicator class to find the widget
-   },
-   editButton: true,
-   editPlaceholder: '.powerwidget-editbox',
-   editClass: 'fa fa-cog | fa fa-cog',
-   editSpeed: 200,
-   onEdit: function () {},
-   fullscreenButton: true,
-   fullscreenClass: 'fa fa-arrows-alt | fa fa-arrows-alt',
-   fullscreenDiff: 3,
-   onFullscreen: function () {},
-   buttonOrder: '%refresh% %delete% %edit% %fullscreen% %toggle%',
-   opacity: 1.0,
-   dragHandle: '> header',
-   placeholderClass: 'powerwidget-placeholder',
-   indicator: true,
-   indicatorTime: 600,
-   ajax: true,
-   timestampPlaceholder: '.powerwidget-timestamp',
-   timestampFormat: 'Last update: %m%/%d%/%y% %h%:%i%:%s%',
-   refreshButton: true,
-   refreshButtonClass: 'fa fa-refresh',
-   labelError: 'Sorry but there was a error:',
-   labelUpdated: 'Last Update:',
-   labelRefresh: 'Refresh',
-   labelDelete: 'Delete widget:',
-   afterLoad: function () {},
-   rtl: false,
-   onChange: function () {},
-   onSave: function () {}
-});
-      }
-
-      // Custom way to delete widgets.
-      $('#trigger-deletewidget').click(function (e) {
-$('.deletethiswidget').remove(); // delete widget
-$('#delete-widget').modal('hide'); // close the modal
-      });
-      $('#trigger-deletewidget-reset').click(function (e) {
-$('body').find('.deletethiswidget').removeClass('deletethiswidget'); // cancel so remove indicator class
-      });
-
-
-      // Empty all local storage. (demo not needed)
-      $('.empty-local-storage').click(function (e) {
-var $m = $('#confirm_replacer');
-if ($m.length && typeof $.fn.modal === 'function') {
-   $('#bootconfirm_confirm', $m).off(clickEvent).on(clickEvent, function (e) {
-      localStorage.clear();
-      location.reload();
-      $m.modal().hide();
-   });
-   $('.modal-title', $m).text("Clear all localStorage");
-   $m.modal();
-} else {
-   var cls = confirm("Clear all localStorage?");
-   if (cls && localStorage) {
-      localStorage.clear();
-      location.reload();
-   }
-}
-e.preventDefault();
-      });
-          </pre>
-    <h3>Powerwidget plugin options</h3>
-    <p>ORB Widgets give you full controls over widgets and portlets (on widgets basis). You can change buttons styles, dragHandle, icons, set toggle and edit speed, change buttons order and much more. See options below.</p>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">Plugin options</th>
-          <th scope="col">Type</th>
-          <th scope="col">Default</th>
-          <th scope="col">Desctription</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>grid</code></td>
-          <td>string</td>
-          <td>section</td>
-          <td>This is the class or element that are used for the sorting (if option sortable is set to true) of a widget. ORB uses <code>.bootstrap-grid</code> class.</td>
-        </tr>
-        <tr>
-          <td><code>widgets</code></td>
-          <td>string</td>
-          <td>.powerwidget</td>
-          <td>Widgets class.</td>
-        </tr>
-        <tr>
-          <td><code>localStorage</code></td>
-          <td>boolean</td>
-          <td>true</td>
-          <td>Everyting is saved in to the local storage, but you can turn this off.</td>
-        </tr>
-        <tr>
-          <td><code>deleteSettingsKey</code></td>
-          <td>string</td>
-          <td></td>
-          <td>You can delete the local storage settings key(if you are using local storage). The settings key is used to store things, style and title.
-            This must be an unique(just for that page) Id or class for example: '#thelink'.</td>
-        </tr>
-        <tr>
-          <td><code>settingsKeyLabel</code></td>
-          <td>string</td>
-          <td>Reset settings?</td>
-          <td>Set the text for the 'deleteSettingsKey' confirm dialog.</td>
-        </tr>
-        <tr>
-          <td><code>deletePositionKey</code></td>
-          <td>string</td>
-          <td></td>
-          <td>You can delete the local storage position key(if you are using local storage). The positions key is used to store the position of the widgets.
-            This must be an unique(just for that page) Id or class for example: '#thelink'.</td>
-        </tr>
-        <tr>
-          <td><code>settingsKeyLabel</code></td>
-          <td>string</td>
-          <td>Reset positions?</td>
-          <td>Set the text for the 'deletePositionKey' confirm dialog.</td>
-        </tr>
-        <tr>
-          <td><code>sortable</code></td>
-          <td>boolean</td>
-          <td>true</td>
-          <td>You can allow widgets to be sortable.</td>
-        </tr>
-        <tr>
-          <td><code>buttonsHidden</code></td>
-          <td>boolean</td>
-          <td>false</td>
-          <td>If you are using action button, you can set them to visible, or hidden. If you choose hidden(value true) the buttons will be 
-            showen if you hover over the widgets header.</td>
-        </tr>
-        <tr>
-          <td><code>toggleButton</code></td>
-          <td>boolean</td>
-          <td>true</td>
-          <td>Show a toggle button.</td>
-        </tr>
-        <tr>
-          <td><code>toggleClass</code></td>
-          <td>string</td>
-          <td>fa fa-chevron-circle-up | fa fa-chevron-circle-down</td>
-          <td>The button class, active and non-active state. The two classes must be seperated by a '|' in order to work.</td>
-        </tr>
-        <tr>
-          <td><code>toggleSpeed</code></td>
-          <td>number(integer)</td>
-          <td>200</td>
-          <td>The speed of the collapsable effect.</td>
-        </tr>
-        <tr>
-          <td><code>onToggle</code></td>
-          <td>function</td>
-          <td>function(){}</td>
-          <td>Callback function that runs if you toggle a widget.</td>
-        </tr>
-        <tr>
-          <td><code>deleteButton</code></td>
-          <td>boolean</td>
-          <td>true</td>
-          <td>Show a delete button.</td>
-        </tr>
-        <tr>
-          <td><code>deleteClass</code></td>
-          <td>string</td>
-          <td>fa fa-times-circle</td>
-          <td>The button class.</td>
-        </tr>
-        <tr>
-          <td><code>onDelete</code></td>
-          <td>function</td>
-          <td>function(){}</td>
-          <td>Callback function that runs once the delete button has been clicked. We also add custom way to delete the widget.</td>
-        </tr>
-        <tr>
-          <td><code>editButton</code></td>
-          <td>boolean</td>
-          <td>true</td>
-          <td>Show a edit button.</td>
-        </tr>
-        <tr>
-          <td><code>editPlaceholder</code></td>
-          <td>string</td>
-          <td>.powerwidget-editbox</td>
-          <td>The class of the edit box wrapper, which contains the title input and styling setters(see the markup demo above for an example).</td>
-        </tr>
-        <tr>
-          <td><code>editClass</code></td>
-          <td>string</td>
-          <td>fa fa-cog | fa fa-cog</td>
-          <td>The edit class, active and non-active state. The two classes must be seperated by a '|' in order to work.</td>
-        </tr>
-        <tr>
-          <td><code>editSpeed</code></td>
-          <td>number(integer)</td>
-          <td>200</td>
-          <td>The speed of the edit effect.</td>
-        </tr>
-        <tr>
-          <td><code>onEdit</code></td>
-          <td>function</td>
-          <td>function(){}</td>
-          <td>Callback function that runs once you close the edit box.</td>
-        </tr>
-        <tr>
-          <td><code>fullscreenButton</code></td>
-          <td>boolean</td>
-          <td>true</td>
-          <td>Show a fullscreen button.</td>
-        </tr>
-        <tr>
-          <td><code>fullscreenClass</code></td>
-          <td>string</td>
-          <td>fa fa-arrows-alt | fa fa-arrows-alt</td>
-          <td>The fullscreen class, active and non-active state. The two classes must be seperated by a '|' in order to work.</td>
-        </tr>
-        <tr>
-          <td><code>fullscreenDiff</code></td>
-          <td>number(integer)</td>
-          <td>3</td>
-          <td>If you change the layout fo the widget, you can use this to make sure the that fullscreen is fullscreen(if needed).</td>
-        </tr>
-        <tr>
-          <td><code>onfullscreen</code></td>
-          <td>function</td>
-          <td>function(){}</td>
-          <td>Callback function that runs once you go to fullscreen mode.</td>
-        </tr>
-        <tr>
-          <td><code>buttonOrder</code></td>
-          <td>string</td>
-          <td>%refresh% %delete% %edit% %fullscreen% %toggle%</td>
-          <td>You can change the order of the buttons</td>
-        </tr>
-        <tr>
-          <td><code>opacity</code></td>
-          <td>number(float)</td>
-          <td>1.0</td>
-          <td>The opacity of the widgets once you drag them.</td>
-        </tr>
-        <tr>
-          <td><code>dragHandle</code></td>
-          <td>string</td>
-          <td>> header</td>
-          <td>Choose the element that you want to use as an drag handle. The widgets main class is the parents class.</td>
-        </tr>
-        <tr>
-          <td><code>placeholderClass</code></td>
-          <td>string</td>
-          <td>powerwidget-placeholder</td>
-          <td>This is the class thats used for the placeholder.</td>
-        </tr>
-        <tr>
-          <td><code>indicator</code></td>
-          <td>boolean</td>
-          <td>true</td>
-          <td>Shows a animated image if there has been made a change in the widget(AJAX, deleting, toggle...).</td>
-        </tr>
-        <tr>
-          <td><code>indicatorTime</code></td>
-          <td>number(integer)</td>
-          <td>600</td>
-          <td>The speed of the indicator image(animated loader image). This is in milliseconds.</td>
-        </tr>
-        <tr>
-          <td><code>ajax</code></td>
-          <td>boolean</td>
-          <td>true</td>
-          <td>Allow widgets to use ajax.</td>
-        </tr>
-        <tr>
-          <td><code>loadingLabel</code></td>
-          <td>string</td>
-          <td>loading...</td>
-          <td>Placeholder text at the start of every page load.</td>
-        </tr>
-        <tr>
-          <td><code>timestampPlaceholder</code></td>
-          <td>string</td>
-          <td>.powerwidget-timestamp</td>
-          <td>Show a timestamp form the last update. Only use classes.</td>
-        </tr>
-        <tr>
-          <td><code>timestampFormat</code></td>
-          <td>string</td>
-          <td>Last update: %m%/%d%/%y% %h%:%i%:%s%</td>
-          <td>Choose the output format.</td>
-        </tr>
-        <tr>
-          <td><code>refreshButton</code></td>
-          <td>boolean</td>
-          <td>true</td>
-          <td>Allow users to refresh the ajax content manually.</td>
-        </tr>
-        <tr>
-          <td><code>refreshClass</code></td>
-          <td>string</td>
-          <td>fa fa-refresh</td>
-          <td>The class of the refresh button.</td>
-        </tr>
-        <tr>
-          <td><code>labelError</code></td>
-          <td>string</td>
-          <td>Sorry but there was a error:</td>
-          <td>Label of the ajax error(label + error code(s)).</td>
-        </tr>
-        <tr>
-          <td><code>labelUpdated</code></td>
-          <td>string</td>
-          <td>Last Update:</td>
-          <td>Label for the timestamp, which will be showen every time it has been updated.</td>
-        </tr>
-        <tr>
-          <td><code>labelRefresh</code></td>
-          <td>string</td>
-          <td>Refresh</td>
-          <td>Label for the refresh button, this button will allow u to refresh the ajax content.</td>
-        </tr>
-        <tr>
-          <td><code>afterLoad</code></td>
-          <td>function</td>
-          <td>function(){}</td>
-          <td>Callback function that runs if the widget loads any ajax content.</td>
-        </tr>
-        <tr>
-          <td><code>rtl</code></td>
-          <td>boolean</td>
-          <td>false</td>
-          <td>Need rtl, use this. (Under constraction)</td>
-        </tr>
-        <tr>
-          <td><code>onChange</code></td>
-          <td>function</td>
-          <td>function(){}</td>
-          <td>Callback function that runs if the position of the widgets get changed in the DOM.</td>
-        </tr>
-        <tr>
-          <td><code>onSave</code></td>
-          <td>function</td>
-          <td>onSave: function(){}</td>
-          <td>Callback function that runs if the data gets saved into the localStorage(you can turn off the localStorage and it still works). You can use this function to store with AJAX your data in a database.</td>
-        </tr>
-      </tbody>
-      <tfoot>
-      </tfoot>
-    </table>
-    <h3>Update plugin and add new powerwidgets</h3>
-    <p>Use the update method to transform newly added widgets into powerwidgets.</p>
-    <pre class="prettyprint linenums">
-$('#id').powerWdigets('update');//will update all of the new widgets on the page
-$('#id').powerWdigets('update', '#id');//will only update the new widgets inside this ID</pre>
-    <h3>Adding custom buttons to a widget</h3>
-    <p>How to add custom buttons to the widgets. Add the code after the plugin call. You need to change the widgets id, the button class (someclass) and the icon class (bookmark). The second block is a basic click event with </p>
-    <pre class="prettyprint linenums">
-// add button
-$('#widgetsid').find('.powerwidget-ctrls').append('<a href="#" class="button-icon someclass"><i class="fa fa-bookmark"></i></a>');
-
-// run the custom action
-$('body').on('click', '.someclass',function(){
-
-    if($(this).children().hasClass('fa fa-bookmark')){
-        $(this).children().removeClass('fa fa-bookmark').addClass('fa fa-folder');
-        
-        // your code goes here(start)
-    }else{
-        $(this).children().removeClass('fa fa-folder').addClass('fa fa-bookmark');
-        
-        // tour code goes here(end)
-    }
-    
-    // code goes here(on every button click)
-});
-</pre>
-    <h3>Globally And Per-Call Overridable Options</h3>
-    <p>This plugin has per-call(as the example above shows) and globally overridable options. Globally options can be used to override the default options, this is best used if you want to override the plugin options by default, this will prevent any issues with the plugin, as you dont have to change any thing in the plugin core it self. Usage: <code>$.fn.pluginName.key = 'value';</code>
-    <p>
-    <div class="page-header">
-      <h1 id="color-code">Color Code</h1>
-    </div>
-    <p>Generally, ORB is creating with neutral color palette, and if you wish you can use all variety of colors. Hovewer, we define some main colors that is compartible with ORB and looks great in every app used in ORB. Please note, that these colors are repeatable &#8212; if you want, you can change them globally using search/replace feature of your favorite code editor. </p>
-    <div class="row">
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-pink"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4 class="text-pink">Pink</h4>
-          <span class="badge">#f87aa0</span></div>
-      </div>
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-blue"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4 class="text-blue">Blue</h4>
-          <span class="badge">#5bc0de</span></div>
-      </div>
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-dark-blue"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4 class="text-dark-blue">DarkBlue</h4>
-          <span class="badge">#3b8dbd</span></div>
-      </div>
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-green"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4 class="text-green">Green</h4>
-          <span class="badge">#82b964</span></div>
-      </div>
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-green-alt"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4 class="text-green-alt">GreenAlt</h4>
-          <span class="badge">#58b868</span></div>
-      </div>
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-yellow"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4 class="text-yellow">Yellow</h4>
-          <span class="badge">#f4cc13</span></div>
-      </div>
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-yellow-muted"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4>Yellow Muted</h4>
-          <span class="badge">#fffbdb</span></div>
-      </div>
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-purple"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4 class="text-purple">Purple</h4>
-          <span class="badge">#a7609a</span></div>
-      </div>
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-grey"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4 class="text-grey">Grey</h4>
-          <span class="badge">#888888</span></div>
-      </div>
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-cold-grey"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4 class="text-cold-grey">Cold Grey</h4>
-          <span class="badge">#595f66</span></div>
-      </div>
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-red"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4 class="text-red">Red</h4>
-          <span class="badge">#d24d33</span></div>
-      </div>
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-dark-red"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4 class="text-dark-red">Dark Red</h4>
-          <span class="badge">#993838</span></div>
-      </div>
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-black"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4 class="text-black">Black</h4>
-          <span class="badge">#000000</span></div>
-      </div>
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-marine"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4 class="text-marine">Marine</h4>
-          <span class="badge">#00a9ae</span></div>
-      </div>
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-acid-green"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4 class="text-green-acid">GreenAcid</h4>
-          <span class="badge">#ccd600</span></div>
-      </div>
-      <div class="col-md-3 col-sm-4 text-center">
-        <div class="color-block bg-orange"><i class="fa fa-tint"></i></div>
-        <div class="color-code-hint">
-          <h4 class="text-orange">Orange</h4>
-          <span class="badge">#f0ad4e</span></div>
-      </div>
-    </div>
-    <p class="margin-top">As you seen that palette will cover all your possible dreams. Using of colors helpers or shortcodes will make your work quicker, accurate and even fun. Combining background colors and text colors you may reach  interesting results and effects. Please see example below to ensure how easily you can manipulate colors shortcodes to get unique look for your blocks and text.</p>
-    <div class="example">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="bg-green padding-20px margin-bottom-20px text-white">
-            <div class="dropcap bg-cold-grey text-white">W</div>
-            orem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacinia fermentum metus at posuere. Vivamus purus dolor, vulputate sed nisi nec, sagittis sagittis ligula. Duis in lacus feugiat, malesuada quam eu, fringilla tortor. Nulla facilisi. Suspendisse dignissim euismod turpis, eget gravida sapien posuere id. Pellentesque auctor mi libero, sollicitudin faucibus augue feugiat sit amet. Aliquam sit amet metus orci. Donec a sodales turpis. Donec pharetra faucibus eleifend. Integer feugiat dapibus commodo. Nullam malesuada ac arcu nec rutrum. <span class="label bg-purple">Wow! Purple Label!</span></div>
-        </div>
-        <div class="col-md-6">
-          <div class="bg-orange padding-20px margin-bottom-20px text-white">
-            <div class="dropcap bg-dark-red text-white">A</div>
-            orem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lacinia fermentum metus at posuere. Vivamus purus dolor, vulputate sed nisi nec, sagittis sagittis ligula. Duis in lacus feugiat, malesuada quam eu, fringilla tortor. Nulla facilisi. Suspendisse dignissim euismod turpis, eget gravida sapien posuere id. Pellentesque auctor mi libero, sollicitudin faucibus augue feugiat sit amet. Aliquam sit amet metus orci. Donec a sodales turpis. Donec pharetra faucibus eleifend. Integer feugiat dapibus commodo. Nullam malesuada ac arcu nec rutrum. <span class="label bg-cold-grey">Wow! Purple Label!</span></div>
-        </div>
-      </div>
-      <div class="highlight">
-        <pre class="prettyprint linenums">
-&lt;div class="bg-green padding-20px text-white"&gt;...&lt;/div&gt;
-&lt;div class="dropcap bg-cold-grey text-white&gt;...&lt;/div&gt;
-&lt;span class="label bg-purple"&gt;...&lt;/span&gt;
-</pre>
-      </div>
-    </div>
-    <div class="page-header">
-      <h3>Styling Widgets</h3>
-    </div>
-    <p>The exactly the same situation when you style widgets and portles. There are two ways of styling widget &#8212; change default widget handler header and change background color of whole widget &#8212; in that case you get styled portlet. For both cases we get predefined styles. Let have closer look. This is a default ORB Power Widget.</p>
-    <div class="example"> 
-      
-      <!-- Widget Row Start grid -->
-      <div class="row">
-        <div class="col-md-12 bootstrap-grid"> 
-          
-          <!-- New widget -->
-          <div class="powerwidget" id="sample-widget" data-widget-editbutton="false">
-            <header>
-              <h2>Widget<small>So Grey and Boring</small></h2>
-            </header>
-            <div class="inner-spacer">Sample Widget</div>
+    <div class="content-wrapper"> 
+      <!--Content Wrapper--><!--Horisontal Dropdown-->
+        <nav class="cbp-hsmenu-wrapper" id="cbp-hsmenu-wrapper">
+          <div class="cbp-hsinner">
+            <ul class="cbp-hsmenu">
+              <li> <a href="#"><span class="icon-bar"></span></a>
+                <ul class="cbp-hssubmenu">
+                  <li><a href="#">
+                    <div class="sparkle-dropdown"><span class="inlinebar">10,8,8,7,8,9,7,8,10,9,7,5</span>
+                      <p class="sparkle-name">project income</p>
+                      <p class="sparkle-amount">$23989 <i class="fa fa-chevron-circle-up"></i></p>
+                    </div>
+                    </a></li>
+                  <li><a href="#">
+                    <div class="sparkle-dropdown"><span class="linechart">5,6,7,9,9,5,3,2,9,4,6,7</span>
+                      <p class="sparkle-name">site traffic</p>
+                      <p class="sparkle-amount">122541 <i class="fa fa-chevron-circle-down"></i></p>
+                    </div>
+                    </a></li>
+                  <li><a href="#">
+                    <div class="sparkle-dropdown"><span class="simpleline">9,6,7,9,3,5,7,2,1,8,6,7</span>
+                      <p class="sparkle-name">Processes</p>
+                      <p class="sparkle-amount">890 <i class="fa fa-plus-circle"></i></p>
+                    </div>
+                    </a></li>
+                  <li><a href="#">
+                    <div class="sparkle-dropdown"><span class="inlinebar">10,8,8,7,8,9,7,8,10,9,7,5</span>
+                      <p class="sparkle-name">orders</p>
+                      <p class="sparkle-amount">$23989 <i class="fa fa-chevron-circle-up"></i></p>
+                    </div>
+                    </a></li>
+                  <li><a href="#">
+                    <div class="sparkle-dropdown"><span class="piechart">1,2,3</span>
+                      <p class="sparkle-name">active/new</p>
+                      <p class="sparkle-amount">500/200 <i class="fa fa-chevron-circle-up"></i></p>
+                    </div>
+                    </a></li>
+                  <li><a href="#">
+                    <div class="sparkle-dropdown"><span class="stackedbar">3:6,2:8,8:4,5:8,3:6,9:4,8:1,5:7,4:8,9:5,3:5</span>
+                      <p class="sparkle-name">fault/success</p>
+                      <p class="sparkle-amount">$23989 <i class="fa fa-chevron-circle-up"></i></p>
+                    </div>
+                    </a></li>
+                </ul>
+              </li>
+            </ul>
           </div>
-          <!-- End Widget --> 
-          
-        </div>
+        </nav>
         
-        <!-- /Inner Row Col-md-12 --> 
         
-      </div>
-      <!-- /Widgets Row End Grid-->
-      
-      <div class="highlight">
-        <pre class="prettyprint linenums">
-&lt;!-- New widget --&gt;
-&lt;div class="powerwidget" id="chat" data-widget-editbutton="false"&gt;
-&lt;header&gt;
-&lt;h2&gt;Widget&lt;small&gt;So Grey and Boring&lt;/small&gt;&lt;/h2&gt;
-&lt;/header&gt;
-&lt;div class="inner-spacer"&gt;Sample Widget&lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- End Widget --&gt;</pre>
-      </div>
-    </div>
-    <p>To get handle header styled just add color you wish. Find <code>class="powerwidget"</code> and add <code>blue</code> class. Yes! Let it be blue. You get now <code>class="powerwidget blue"</code>. Full list of available colors see above. In main css file all styles for styling widget header in Colors Helpers Chapter, together with other color styles.</p>
-    <div class="example"> 
-      
-      <!-- Widget Row Start grid -->
-      <div class="row">
-        <div class="col-md-12 bootstrap-grid"> 
-          
-          <!-- New widget -->
-          <div class="powerwidget blue" id="blue-widget" data-widget-editbutton="false">
-            <header>
-              <h2>Widget<small>Blue and Nice</small></h2>
-            </header>
-            <div class="inner-spacer">Sample Widget</div>
+          <!--Breadcrumb-->
+<div class="breadcrumb clearfix">
+            <ul>
+              <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+              <li><a href="index.html">Dashboard</a></li>
+              <li class="active">Data</li>
+            </ul>
           </div>
-          <!-- End Widget --> 
+          <!--/Breadcrumb--> 
           
-        </div>
-        
-        <!-- /Inner Row Col-md-12 --> 
-        
-      </div>
-      <!-- /Widgets Row End Grid-->
-      
-      <div class="highlight">
-        <pre class="prettyprint linenums">
-&lt;!-- New widget --&gt;
-&lt;div class="powerwidget blue" id="chat" data-widget-editbutton="false"&gt;
-&lt;header&gt;
-&lt;h2&gt;Widget&lt;small&gt;Blue and Nice&lt;/small&gt;&lt;/h2&gt;
-&lt;/header&gt;
-&lt;div class="inner-spacer"&gt;Sample Widget&lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- End Widget --&gt;</pre>
-      </div>
-    </div>
-    <p>To get widget looks like portlet (as shown on <a href="../admin-portlets.html">Portlets Page</a>) we need to get styled not only header but powerwidget <code>inner-spacer</code> class. ORB has it shortcoded too. To get widget become blue portlet simple add <code>.powerwidget-as-portlet-blue</code> class to your widget. Full list of available colors see above. In main css file all styles for   styling widget header in Colors Helpers Chapter, together with other   color styles.</p>
-    <div class="example"> 
-      
-      <!-- Widget Row Start grid -->
-      <div class="row">
-        <div class="col-md-12 bootstrap-grid"> 
-          
-          <!-- New widget -->
-          <div class="powerwidget powerwidget-as-portlet-blue" id="sample-portlet" data-widget-editbutton="false">
-            <header>
-              <h2>Widget<small>Blue and Nice</small></h2>
-            </header>
-            <div class="inner-spacer">Sample Widget As a Portlet Blue</div>
+          <!--Jumbotron-->
+          <div class="jumbotron jumbotron0">
+            <h1>Welcome 2 <strong>ORB</strong></h1>
+            <p class="lead">ORB &#8212; fully responsive admin template powered by BootStrap 3 Framework. 
+              ORB is packed with tons of accurately styled and predefined components, plugins and features that can be used in 
+              creation of admin dashboards, CRM and CMS panels. </p>
+            <small>ORB has own premium and unique features, such as powerfull <a href="admin-widgets.html">ORB Widgets</a>, <a href="admin-portlets.html">Portlets Gallery</a>, <a href="admin-inbox.html">Prototyped Inbox</a>, <a href="admin-forms-validation.html">Form Validation and AJAX Processing</a>, <a href="admin-animation.html">revised Bootstrap Modal and Popover</a> classes and much more. ORB is also bundled with 6 predefined styles.</small>
+            <p><a href="#" class="btn margin-top btn-danger"><i class="fa fa-shopping-cart"></i> Buy on Themeforest</a></p>
           </div>
-          <!-- End Widget --> 
+          <!--/Jumbotron--> 
           
-        </div>
-        
-        <!-- /Inner Row Col-md-12 --> 
-        
-      </div>
-      <!-- /Widgets Row End Grid-->
-      
-      <div class="highlight">
-        <pre class="prettyprint linenums">
-&lt;!-- New widget --&gt;
-&lt;div class="powerwidget powerwidget-as-portlet-blue" id="chat" data-widget-editbutton="false"&gt;
-&lt;header&gt;
-&lt;h2&gt;Widget&lt;small&gt;Blue and Nice&lt;/small&gt;&lt;/h2&gt;
-&lt;/header&gt;
-&lt;div class="inner-spacer"&gt;Sample Widget&lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- End Widget --&gt;</pre>
-      </div>
-    </div>
-    <div class="callout callout-warning"> You need to know one more thing about styling portlets. When creating new portlet keep mind about proper padding and spacing inside portlet. It is pure aesthetic question we get rid from top padding from <code>.inner-spacer</code> class, see <code>.powerwidget-as-portlet .inner-spacer { padding-top: 0 }</code> in portlets section in main CSS file. If we have only one component inside portlet &#8212; it will be good to remove padding at all with <code>.powerwidget-as-portlet .inner-spacer.nopadding</code> class. </div>
-    <div class="callout callout-info">For a full information about styling and handling widgets go to <a href="../admin-widgets.html">Powerwidgets page</a> of the theme.</div>
-    <div class="page-header">
-      <h1 id="javascript">JavaScript</h1>
-    </div>
-    <p>All scripts initialization settings from all scripts engaged in ORB stored in main<code>scripts.js</code> file. This file also contains scripts and settings for all applications used on all page in theme. Like HTML and CSS ORB JavaScript is also hardly commented. So, you easily find code you need without any difficulties. Please note &#8212; we include only minified versions of apps in ORB archive. To get full versions please visit app homepage. Here is table of all scripts and apps used in ORB Theme.</p>
-    <div class="table-responsive">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Folder/Script</th>
-            <th>Purpose</th>
-            <th>HomePage</th>
-            <th>Scripts.js</th>
-            <th>pages affected</th>
-          </tr>
-        </thead>
-        <tr>
-          <td><strong>Animation</strong> <span class="label label-default">animation.js</span></td>
-          <td>This scripts overrides BS 3 core Modal Class and add animation possibility to BS popovers. Script allows to add smooth animations from <span class="label label-default">animate.css</span> to BS Modals and popovers via data-attributes.</td>
-          <td><a href="http://daneden.github.io/animate.css/" class="btn btn-default btn-sm">Animate.css</a></td>
-          <td><span class="label label-danger">no</span></td>
-          <td><span class="label label-default">admin-animation.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>Bootstrap-progress-bar</strong> <span class="label label-default">bootstrap-progressbar.min</span></td>
-          <td>Bootstrap-progressbar is a jQuery plugin which extends the basic twitter-bootstrap progressbar. It provides the ability to animate the progressbar by adding Javascript in combination with the preexisting css transitions. Additionally you can display the current progress information in the bar or get the value via callback.</td>
-          <td><a href="http://www.minddust.com/project/bootstrap-progressbar/" class="btn btn-default btn-sm">BS ProgressBar</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-components.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>Bootstrap-Hover-dropdown</strong> <span class="badge bg-blue">New in 1.1</span></td>
-          <td>A simple plugin to enable Bootstrap dropdowns to active on hover and provide a nice user experience.</td>
-          <td><a href="http://cameronspear.com/blog/bootstrap-dropdown-on-hover-plugin/" class="btn btn-default btn-sm">BS Hover Dropdown</a></td>
-          <td><span class="label label-danger">no</span></td>
-          <td><span class="label label-default">admin-megamenu.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>jQuery gNap</strong> <span class="badge bg-blue">New in 1.1</span></td>
-          <td>gMap is a lightweight jQuery plugin that helps you embed Google Maps into your website. With less than 2 KB in size (minified and gzipped) it is very flexible and highly customizable.</td>
-          <td><a href="https://github.com/marioestrada/jQuery-gMap/" class="btn btn-default btn-sm">jQuery gNap</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td>Everywhere there Google Maps are used</td>
-        </tr>
-        <tr>
-          <td><strong>Chartjs</strong> <span class="label label-default">chart.min.js</span></td>
-          <td>Easy, object oriented client side graphs for designers and geeks.</td>
-          <td><a href="http://www.chartjs.org/" class="btn btn-default btn-sm">ChartJS</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-portlets.html</span>, <span class="label label-default">index.html</span>, <span class="label label-default">admin-chart-others.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>Classie</strong> <span class="label label-default">classie.js</span></td>
-          <td>A library agnostic extensible DOM utility. Nothing else.</td>
-          <td><a href="https://github.com/ded/bonzo" class="btn btn-default btn-sm">Classie</a></td>
-          <td><span class="label label-danger">no</span></td>
-          <td>All Pages</td>
-        </tr>
-        <tr>
-          <td><h4>Datatables</h4></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td><strong>Datatables</strong> <span class="label label-default">jquery.dataTables.min.js</span></td>
-          <td>DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, and will add advanced interaction controls to any HTML table.</td>
-          <td><a href="http://www.datatables.net/" class="btn btn-default btn-sm">DataTables</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-datatables.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>Datatables ColVis</strong> <span class="label label-default">colvis.extras.js</span> and <span class="label label-default">dataTables.colVis.js</span></td>
-          <td><p>ColVis adds a button to the toolbars around DataTables which gives the end user of the table the ability to dynamically change the visibility of the columns in the table - dynamically show and hide columns in a table, ability to exclude columns from being either hidden or shown. We use that plugin in #table3 Example</p></td>
-          <td><a href="http://datatables.net/extensions/colvis/" class="btn btn-default btn-sm">ColVis Plugin</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-datatables.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>Datatables Bootstrap</strong> <span class="label label-default">jquery.dataTables-bootstrap.js</span></td>
-          <td>To have DataTables styled by Bootstrap, we need do, as well as including the DataTables core Javascript file on our page, is include the DataTables / Bootstrap CSS and Javascript integration files. These files simply alter the DataTables defaults, such as class names to use the names used by Bootstrap, and add styling information specific to DataTables.</td>
-          <td><a href="http://datatables.net/manual/styling/bootstrap" class="btn btn-default btn-sm">Datatables BS Styling</a></td>
-          <td><span class="label label-danger">no</span></td>
-          <td><span class="label label-default">admin-datatables.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>Easing</strong> <span class="label label-default">jquery.easing.1.3.min.js</span></td>
-          <td>JQuery Easing Plugin. The only one reason we use that old good because it's required for EasyPie Chart to operate</td>
-          <td><a href="http://gsgd.co.uk/sandbox/jquery/easing/" class="btn btn-default btn-sm">JQuery Easing</a></td>
-          <td><span class="label label-danger">no</span></td>
-          <td><span class="label label-default">index.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>Easypie </strong><span class="label label-default">jquery.easypiechart.min.js</span></td>
-          <td>Lightweight plugin to render simple, animated and retina optimized pie charts</td>
-          <td><a href="https://github.com/rendro" class="btn btn-default btn-sm">EasyPie</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">index.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>Fitvids</strong> <span class="label label-default">jquery.fitvids.js</span></td>
-          <td>A lightweight, really the smallest one, easy-to-use jQuery plugin for fluid width video embeds.</td>
-          <td><a href="http://fitvidsjs.com/" class="btn btn-default btn-sm">FitVids</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-portlets.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>Flotchart</strong> <span class="label label-default"><strong>jquery.flot.min.js</strong></span> (including plugins<span class="label label-default">jquery.flot.axislabels.js</span>, <span class="label label-default">jquery.flot.categories.min.js</span>, <span class="label label-default">jquery.flot.pie.min.js</span>, <span class="label label-default">jquery.flot.resize.min.js</span>, <span class="label label-default">jquery.flot.selection.min.js</span>, <span class="label label-default">jquery.flot.stack.min.js</span>, <span class="label label-default">jquery.flot.time.min.js</span>, <span class="label label-default">jquery.flot-tooltip.min.js</span>)</td>
-          <td>Flot is a powerfull (may be even the most powerfull) pure JavaScript plotting library for jQuery, with a focus on simple usage, attractive looks and many many interactive features. Generally Flots is a standard for creating Dashboards. <small>(There is no need to give description to every plugin.  The name of plugin speaks itself.)</small></td>
-          <td><a href="http://www.flotcharts.org/" class="btn btn-default btn-sm">FlotCharts</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-chart.html</span></td>
-        </tr>
-        <tr>
-          <td><h4>Forms</h4></td>
-          <td></td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td><strong>Jquery Form</strong> <span class="label label-default">jquery.form.min.js</span></td>
-          <td><p>The jQuery Form Plugin used for ORB Forms allows  to easily and unobtrusively upgrade HTML forms to use AJAX.  The main methods, ajaxForm and ajaxSubmit, gather information from the form element to determine how to manage the submit process. Both of these methods support numerous options which allows you to have full control over how the data is submitted. </p>
-            <p><small>No special markup is needed, just a normal form.  Submitting a form with AJAX doesn't get any easier than this!</small></p></td>
-          <td><a href="https://github.com/malsup/form" class="btn btn-default btn-sm">jQuery Form Plugin</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-forms.html</span>, <span class="label label-default">admin-login.html</span>, <span class="label label-default">admin-lock.html</span>...</td>
-        </tr>
-        <tr>
-          <td><strong>Jquery MaskedInput</strong> <span class="label label-default">jquery.maskedinput.min.js</span></td>
-          <td>This is a masked input plugin for the jQuery javascript library. It allows a user to more easily enter fixed width input where you would like them to enter the data in a certain format (dates,phone numbers, etc).</td>
-          <td><a href="http://digitalbush.com/projects/masked-input-plugin/" class="btn btn-default btn-sm">Masked Input Plugin</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-forms.html</span>, <span class="label label-default">admin-login.html</span>, <span class="label label-default">admin-lock.html</span>...</td>
-        </tr>
-        <tr>
-          <td><strong>Jquery PlaceHolder</strong> <span class="label label-default">jquery.placeholder.min.js</span></td>
-          <td>Tiny plugin for old browsers to support placeholder attribute.</td>
-          <td><a href="http://matoilic.github.io/jquery.placeholder/" class="btn btn-default btn-sm">jQuery Placeholder Polyfill</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-forms.html</span>, <span class="label label-default">admin-login.html</span>, <span class="label label-default">admin-lock.html</span>...</td>
-        </tr>
-        <tr>
-          <td><strong>Jquery Validate</strong> <span class="label label-default">jquery.validate.min.js</span></td>
-          <td>The jQuery Validation Plugin provides drop-in validation for  forms, while making all kinds of customizations to fit  application really easy.</td>
-          <td><a href="https://github.com/jzaefferer/jquery-validation" class="btn btn-default btn-sm">jQuery Validation Plugin</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-forms.html</span>, <span class="label label-default">admin-login.html</span>, <span class="label label-default">admin-lock.html</span>...</td>
-        </tr>
-        <tr>
-          <td><strong>Fullcalendar</strong> <span class="label label-default">fullcalendar.min.js</span> and <span class="label label-default">gcal.js</span></td>
-          <td>FullCalendar is a jQuery plugin that provides a full-sized, drag &amp; drop calendar like the one below. It uses AJAX to fetch events on-the-fly for each month and is easily configured to use your own feed format (an extension is provided for Google Calendar). It is visually customizable and exposes hooks for user-triggered events (like clicking or dragging an event).</td>
-          <td><a href="http://arshaw.com/fullcalendar/" class="btn btn-default btn-sm">FullCalendar</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-events.html</span>, <span class="label label-default">index.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>Fullscreen</strong> <span class="label label-default">screenfull.min.js</span></td>
-          <td>Simple wrapper for cross-browser usage of the JavaScript Fullscreen API, which lets you bring the page or any element into fullscreen. Smoothens out the browser implementation differences, so you don't have too.</td>
-          <td><a href="https://github.com/sindresorhus/screenfull.js" class="btn btn-default btn-sm">FullScreen</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td>All Pages</td>
-        </tr>
-        <tr>
-          <td><strong>Horizontal </strong><span class="label label-default">cbpHorizontalSlideOutMenu.js</span></td>
-          <td>Requires <span class="label label-default">modernizr.custom.js</span> and <span class="label label-default">classie.js</span> A horizontal slide out menu with a grid-like layout for the submenu you can see at the top of content part on every theme page,  with media query examples for smaller devices. </td>
-          <td><a href="http://tympanus.net/codrops/2013/05/17/horizontal-slide-out-menu/" class="btn btn-default btn-sm">Horizontal Slide Out Menu</a></td>
-          <td><span class="label label-danger">no</span></td>
-          <td>All pages</td>
-        </tr>
-        <tr>
-          <td><strong>ion.rangeSlider.min</strong> <span class="label label-default">ion.rangeSlider.min.js</span></td>
-          <td>Ion.RangeSlider — cool, comfortable and easily customizable range slider that 
-            supports events and public methods, has flexible settings, can be completely altered with CSS. We use own style for that plugin called ORB<br></td>
-          <td><a href="https://github.com/IonDen/ion.rangeSlider" class="btn btn-default btn-sm">ion.rangeSlider</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-events.html</span>, <span class="label label-default">index.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>jQuery and jQueryUI</strong><span class="label label-default">jquery.min.js</span> and <span class="label label-default">jquery-ui.min.js</span></td>
-          <td><strong>jQuery and jQueryUI theirselves</strong></td>
-          <td><a href="http://jquery.com/" class="btn btn-default btn-sm">jQuery</a></td>
-          <td><span class="label label-danger">no</span></td>
-          <td>All Pages</td>
-        </tr>
-        <tr>
-          <td><strong>jQuery Steps</strong> <span class="label label-default">jquery.steps.min.js</span></td>
-          <td>jQuery Steps is a smart UI component which allows you to easily create wizard-like interfaces. This plugin groups content into sections for a more structured and orderly page view.</td>
-          <td><a href="http://www.jquery-steps.com" class="btn btn-default btn-sm">jQuery Steps</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-forms-wizard.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>jQuery.knob</strong> <span class="label label-default">jquery.knob.js</span></td>
-          <td>Nice, downward compatible, touchable, jQuery input dial.</td>
-          <td><a href="http://anthonyterrien.com/knob/" class="btn btn-default btn-sm">jQuery Knob</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-forms-plugins.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>Modernizr</strong> <span class="label label-default">modernizr.custom.js</span></td>
-          <td>Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser.</td>
-          <td><a href="http://modernizr.com/" class="btn btn-default btn-sm">Modernizr</a></td>
-          <td>&nbsp;</td>
-          <td>All Pages</td>
-        </tr>
-        <tr>
-          <td><strong>Morris Chart</strong> <span class="label label-default">morris.min.js</span></td>
-          <td>Simply the one of the best looking Charts. Requires <span class="label label-default">raphael-min.js</span> to operate.</td>
-          <td><a href="http://www.oesmith.co.uk/morris.js/" class="btn btn-default btn-sm">Morris Chart</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-charts-morris.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>Nanoscroller</strong> <span class="label label-default">jquery.nanoscroller.min.js</span></td>
-          <td>jQuery plugin that offers a simplistic way of implementing Mac OS X Lion-styled scrollbars for ORB. We use Nanoscroller in main header dropdowns-menus, chat and other parts of the theme.</td>
-          <td><a href="http://jamesflorentino.github.io/nanoScrollerJS/" class="btn btn-default btn-sm">NanoScrollerJS</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td>All Pages</td>
-        </tr>
-        <tr>
-          <td><strong>jQuery Nestable</strong> <span class="label label-default">jquery.nestable.js</span></td>
-          <td>Just Simple Nestable Lists</td>
-          <td><a href="https://github.com/dbushell/Nestable" class="btn btn-default btn-sm">Nestable</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-nestable-lists.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>Powerwidgets</strong> <span class="label label-default">powerwidgets.min.js</span></td>
-          <td>ORB Power widgets — is a unique and extremely powerfull tool for organizing workspace in Dashboard. Sortable, easy-to-edit responsive blocks bring real joy and happyness. This is a premium plugin.</td>
-          <td><a href="../admin-widgets.html" class="btn btn-default btn-sm">ORB Widgets</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td>All Pages</td>
-        </tr>
-        <tr>
-          <td><strong>Raphael</strong> <span class="label label-default">raphael-min.js</span></td>
-          <td><p>Raphaël  is a small JavaScript library that should simplify your work with vector graphics on the web. It uses the SVG W3C Recommendation and VML as a base for creating graphics. This means every graphical object you create is also a DOM object, so you can attach JavaScript event handlers or modify them later. Raphaël’s goal is to provide an adapter that will make drawing vector art compatible cross-browser and easy. This library needs for <span class="label label-default">Morris Charts</span>
-          </p></td>
-          <td><a href="http://raphaeljs.com/" class="btn btn-default btn-sm">Raphaël</a></td>
-          <td><span class="label label-danger">no</span></td>
-          <td><span class="label label-default">admin-chart-morris.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>Skycons</strong> <span class="label label-default">skycons.js</span></td>
-          <td>Skycons is a set of ten animated weather glyphs, procedurally generated by JavaScript using the HTML5 canvas tag. They're easy to use, and pretty lightweight.</td>
-          <td><a href="https://github.com/darkskyapp/skycons/" class="btn btn-default btn-sm">SkyCons</a></td>
-          <td><span class="label label-info">inline</span></td>
-          <td><span class="label label-default">admin-portlets.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>Sparklines</strong> <span class="label label-default">jquery.sparkline.min.js</span></td>
-          <td>This jQuery plugin generates sparklines (small inline charts) directly in the browser using data supplied either inline in the HTML, or via javascript. </td>
-          <td><a href="http://omnipotent.net/jquery.sparkline/" class="btn btn-default btn-sm">SparkLines</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td>All pages</td>
-        </tr>
-        <tr>
-          <td><strong>Summernote</strong> <span class="label label-default">summernote.min.js</span></td>
-          <td>Summernote is a super simple WYSIWYG Editor based on Bootstrap</td>
-          <td><a href="https://github.com/HackerWins/summernote" class="btn btn-default btn-sm">Summernote</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-inbox.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>ToDos</strong> <span class="label label-default">todos.js</span></td>
-          <td>Simple scripts for creating ToDo prototype</td>
-          <td>&nbsp;</td>
-          <td><span class="label label-danger">no</span></td>
-          <td>All pages</td>
-        </tr>
-        <tr>
-          <td><strong>Vector Map</strong> <span class="label label-default"><strong>jquery.vmap.min.js</strong></span> Includes <span class="label label-default">jquery.vmap.europe.js</span>, <span class="label label-default">jquery.vmap.world.js</span>, <span class="label label-default">jquery.vmap.russia.js</span>, <span class="label label-default">jquery.vmap.sampledata.js</span>, <span class="label label-default">jquery.vmap.usa.js</span></td>
-          <td>Just Beautifull Vector Maps &#8212; heavily modified version of <A href="https://github.com/bjornd/jvectormap">jVectorMap</A>.</td>
-          <td><a href="https://github.com/manifestinteractive/jqvmap" class="btn btn-default btn-sm">jQvMap</a></td>
-          <td><span class="label label-success">yes</span></td>
-          <td><span class="label label-default">admin-maps-vector.html</span>, <span class="label label-default">index.html</span>, <span class="label label-default">admin-portlets.html</span></td>
-        </tr>
-        <tr>
-          <td><strong>x-editable</strong> Consist of <span class="label label-default">address.js</span>, <span class="label label-default">bootstrap-editable.min.js</span>, <span class="label label-default">demo.js</span>, <span class="label label-default">demo-mock.js</span>, <span class="label label-default">jquery.mockjax.js</span>, <span class="label label-default">moment.min.js</span>, <span class="label label-default">select2.js</span>, <span class="label label-default">typeahead.js</span>, <span class="label label-default">typeaheadjs.js</span></td>
-          <td>This library allows you to create editable elements on your page.</td>
-          <td><a href="http://vitalets.github.io/x-editable/" class="btn btn-default btn-sm">X-Editables</a></td>
-          <td><span class="label label-danger">no</span></td>
-          <td><span class="label label-default">admin-forms-plugins.html</span></td>
-            </td>
-        </tr>
-      </table>
-    </div>
-    <div class="callout callout-danger"> Please pay attention, that for every function is scripts.js file we check for function existence. It helps prevent browser console warnings and errors. Moreover that method guarantee faster page load &#8212; we load only needed functions invoked in page.</div>
-    <h1 id="animation">Animation</h1>
-    <p>Bootstrap Modal and Popover Animation &#8212; one of the feature of ORB. As we stated before ORB has modified Bootstrap Modal Class within <code>animation.js</code>file to get animations work. As you seen on <a href="../admin-animation.html">this page</a> modal has two animated effects &#8212; before modal window open (incoming) and after modal closed or executed (outgoing). So we need to apply these animation to modal. Modified Modal Class allows to do it via data-attrbutes options. </p>
-    <div class="example"> <a href="#myModal20" role="button" class="btn btn-success margin-bottom-20px" data-toggle="modal">roll In | Out Animation</a>
-      <div id="myModal20" class="modal" data-easein="rollIn" data-easeout="rollOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <h4 class="modal-title">Modal header</h4>
+          <!-- Widget Row Start grid -->
+          <div class="row" id="powerwidgets"> 
+            
+            
+            <div class="col-md-12 bootstrap-grid"> 
+              
+              <!-- New widget -->
+              
+              <div class="powerwidget cold-grey" id="serverstatus-index">
+                <header>
+                  <h2>Server Status</h2>
+                </header>
+                <div>
+                  <div class="powerwidget-editbox">
+                    <div>
+                      <label>Title:</label>
+                      <input class="form-control" type="text" />
+                    </div>
+                    <div>
+                      <label>Styles:</label>
+                      <span data-widget-setstyle="pink" class="pink-btn"></span> <span data-widget-setstyle="blue" class="blue-btn"></span> <span data-widget-setstyle="dark-blue" class="dark-blue-btn"></span> <span data-widget-setstyle="green" class="green-btn"></span> <span data-widget-setstyle="green-alt" class="green-alt-btn"></span> <span data-widget-setstyle="green-acid" class="green-acid-btn"></span> <span data-widget-setstyle="yellow" class="yellow-btn"></span> <span data-widget-setstyle="purple" class="purple-btn"></span> <span data-widget-setstyle="cold-grey" class="cold-grey-btn"></span> <span data-widget-setstyle="dark-cold-grey" class="dark-cold-grey-btn"></span> <span data-widget-setstyle="orange" class="orange-btn"></span> <span data-widget-setstyle="red" class="red-btn"></span> <span data-widget-setstyle="dark-red" class="dark-red-btn"></span> <span data-widget-setstyle="black" class="black-btn"></span> </div>
+                  </div>
+                  <div class="inner-spacer">
+                    <div class="row"> 
+                      <!--Row-->
+                      <div class="col-md-6">
+                        <div class="flotchart-container bg-pink">
+                          <div class="inner-stuff orb-form">
+                            <label class="toggle">
+                              <input type="checkbox" name="checkbox-toggle" id="start7">
+                              <i></i>Live Switch:</label>
+                          </div>
+                          <div id="placeholder7" class="flotchart-placeholder"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="flotchart-container bg-blue">
+                          <div id="placeholder8" class="flotchart-placeholder"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--/Row-->
+                    <div class="row"> 
+                      <!--Row-->
+                      <ul class="tiny-stats">
+                        <li class="col-md-3 col-sm-6">
+                          <div class="statistic clearfix">
+                            <div class="easy-pie-chart-container"><span class="chart" id="easy1" data-percent="65"> <span class="percent"></span> </span></div>
+                            <span class="title">Processors Load<small class="text-cold-grey">16 Units Overall</small></span>
+                            <ul class="pull-right">
+                              <li><span class="label bg-cold-grey"><i class="fa fa-caret-up"></i> 17%</span></li>
+                              <li><span class="label bg-green-alt"><i class="fa fa-caret-down"></i> 80%</span></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="col-md-3 col-sm-6">
+                          <div class="statistic clearfix">
+                            <div class="easy-pie-chart-container"><span class="chart" id="easy2" data-percent="81"> <span class="percent"></span> </span></div>
+                            <span class="title">RAM Utilization<small class="text-cold-grey">96GB / 16 Modules</small></span>
+                            <ul class="pull-right">
+                              <li><span class="label bg-cold-grey"><i class="fa fa-caret-up"></i> 21%</span></li>
+                              <li><span class="label bg-pink"><i class="fa fa-caret-down"></i> 46%</span></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="col-md-3 col-sm-6">
+                          <div class="statistic clearfix">
+                            <div class="easy-pie-chart-container"><span class="chart" id="easy3" data-percent="39"> <span class="percent"></span> </span></div>
+                            <span class="title">Disk Usage<small class="text-cold-grey">200TB Raid</small></span>
+                            <ul class="pull-right">
+                              <li><span class="label bg-dark-red"><i class="fa fa-caret-up"></i> 88%</span></li>
+                              <li><span class="label bg-pink"><i class="fa fa-caret-down"></i> 31%</span></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="col-md-3 col-sm-6">
+                          <div class="statistic clearfix">
+                            <div class="easy-pie-chart-container"><span class="chart" id="easy4" data-percent="46"> <span class="percent"></span> </span></div>
+                            <span class="title">MySQL Queries<small class="text-cold-grey">1289 From 3000</small></span>
+                            <ul class="pull-right">
+                              <li><span class="label bg-orange"><i class="fa fa-caret-up"></i> 29%</span></li>
+                              <li><span class="label bg-yellow"><i class="fa fa-caret-down"></i> 35%</span></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <!--/Row--> 
+                  </div>
+                </div>
+                </div>
+                
+                <!-- End .powerwidget --> 
+                
+                <!-- New widget -->
+                <div class="powerwidget cold-grey" id="vectormap-index" data-widget-editbutton="false">
+                  <header>
+                    <h2>Traffic Geo<small>Just Demo</small></h2>
+                  </header>
+                  <div class="inner-spacer">
+                    <div class="row"> 
+                      <!--Row-->
+                      <div class="col-md-6">
+                        <div id="vmap" class="jqvmap"></div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="table-responsive">
+                          <table class="table table-striped table-hover margin-0px airtable">
+                            <thead>
+                              <tr>
+                                <th colspan="2">Country</th>
+                                <th >Source/Data</th>
+                                <th >Part</th>
+                                <th >Dinamic</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><span class="num">1</span></td>
+                                <td><h5>United States</h5>
+                                  <small><i class="fa fa-clock-o"></i> Last Update</small> <span class="badge">12:20</span></td>
+                                <td><h5>Google<small class="text-muted">Google Analytics</small></h5>
+                                  <small><strong>589871 <span class="text-green">(567113)</span></strong> <i class="fa fa-caret-down"></i></small></td>
+                                <td class="text-center"><span class="table-sparkline-pie2">1,3,2,5,3</span></td>
+                                <td class="text-center"><span class="table-sparkline-lines">5,6,7,9,9,5,3,2,2,4,6,7</span></td>
+                              </tr>
+                              <tr>
+                                <td ><span class="num">2</span></td>
+                                <td><h5>China</h5>
+                                  <small><i class="fa fa-clock-o"></i> Last Update</small> <span class="badge">12:21</span></td>
+                                <td><h5>Google<small class="text-muted">Google Analytics</small></h5>
+                                  <small><strong>82871 <span class="text-green">(99143)</span></strong> <i class="fa fa-caret-up"></i></small></td>
+                                <td class="text-center"><span class="table-sparkline-pie2">3,3,2,1,5</span></td>
+                                <td class="text-center"><span class="table-sparkline-lines">9,3,3,2,4,5,6,2,8,4,9,0</span></td>
+                              </tr>
+                              <tr>
+                                <td ><span class="num">3</span></td>
+                                <td><h5>Germany</h5>
+                                  <small><i class="fa fa-clock-o"></i> Last Update</small> <span class="badge">12:22</span></td>
+                                <td><h5>Google<small class="text-muted">Google Analytics</small></h5>
+                                  <small><strong>589666 <span class="text-red">(542313)</span></strong> <i class="fa fa-caret-down"></i></small></td>
+                                <td class="text-center"><span class="table-sparkline-pie2">1,3,2,3,1</span></td>
+                                <td class="text-center"><span class="table-sparkline-lines">5,6,7,9,9,5,3,2,8,4,6,7</span></td>
+                              </tr>
+                              <tr>
+                                <td ><span class="num">4</span></td>
+                                <td><h5>Russian Federation</h5>
+                                  <small><i class="fa fa-clock-o"></i> Last Update</small> <span class="badge">12:23</span></td>
+                                <td><h5>Google<small class="text-muted">Google Analytics</small></h5>
+                                  <small><strong>589788 <span class="text-green">(508113)</span></strong> <i class="fa fa-caret-down"></i></small></td>
+                                <td class="text-center"><span class="table-sparkline-pie2">4,3,2,2,5</span></td>
+                                <td class="text-center"><span class="table-sparkline-lines">5,6,7,9,9,5,3,9,2,4,6,7</span></td>
+                              </tr>
+                              <tr>
+                                <td ><span class="num">5</span></td>
+                                <td><h5>India</h5>
+                                  <small><i class="fa fa-clock-o"></i> Last Update</small> <span class="badge">12:24</span></td>
+                                <td><h5>Google<small class="text-muted">Google Analytics</small></h5>
+                                  <small><strong>589871 <span class="text-blue">(567113)</span></strong> <i class="fa fa-caret-down"></i></small></td>
+                                <td class="text-center"><span class="table-sparkline-pie2">3,3,2,5,7</span></td>
+                                <td class="text-center"><span class="table-sparkline-lines">5,6,7,9,9,5,3,2,2,4,6,7</span></td>
+                              </tr>
+                              <tr>
+                                <td ><span class="num">6</span></td>
+                                <td><h5>Antarctica</h5>
+                                  <small><i class="fa fa-clock-o"></i> Last Update</small> <span class="badge">12:25</span></td>
+                                <td><h5>Google<small class="text-muted">Google Analytics</small></h5>
+                                  <small><strong>589871 <span class="text-green">(567113)</span></strong> <i class="fa fa-caret-up"></i></small></td>
+                                <td class="text-center"><span class="table-sparkline-pie2">2,3,2,2,6</span></td>
+                                <td class="text-center"><span class="table-sparkline-lines">5,6,7,2,4,5,1,2,8,4,6,9</span></td>
+                              </tr>
+                            </tbody>
+                            <tfoot>
+                              <tr>
+                                <th colspan="2">Country</th>
+                                <th>Source</th>
+                                <th>Part</th>
+                                <th>Dynamic</th>
+                              </tr>
+                            </tfoot>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <!--/Row--> 
+                  </div>
+                </div>
+                <!-- End Widget --> 
+                
+              </div>
+              <!-- /Inner Row Col-md-12 -->
+              
+              <div class="col-md-4 bootstrap-grid"> 
+                <!-- New widget -->
+                <div class="powerwidget powerwidget-as-portlet-green" id="chartjsgraphs-index-1" data-widget-editbutton="false">
+                  <header>
+                    <h2>Rates</h2>
+                  </header>
+                  <div class="inner-spacer">
+                    <div class="row">
+                      <div class="col-md-12 text-center">
+                        <canvas id="chartjs-doughnut2" height="170" width="170"></canvas>
+                        <h1 class="colossal"><i class="fa fa-dollar"></i>8290<i class="fa fa-caret-up"></i></h1>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                        <h3 class="text-white margin-0px margin-top">2584</h3>
+                        <span class="label bg-dark-cold-grey"><strong>Excellent</strong> <i class="fa fa-chevron-circle-up"></i></span> </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                        <h3 class="text-white margin-0px margin-top">1823</h3>
+                        <span class="label bg-white"><strong>Good</strong> <i class="fa fa-chevron-circle-up"></i></span> </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6 text-center margin-bottom-20px">
+                        <h3 class="text-white margin-0px margin-top">1823</h3>
+                        <span class="label bg-yellow"><strong>Bad !#%**</strong> <i class="fa fa-chevron-circle-up"></i></span> </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6 text-center margin-bottom-20px">
+                        <h3 class="text-white margin-0px margin-top">2345</h3>
+                        <span class="label bg-cold-grey"><strong>Terrible</strong> <i class="fa fa-chevron-circle-up"></i></span> </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /New widget --> 
+              </div>
+              <!-- /Inner Row Col-md-4 -->
+              
+              <div class="col-md-4 bootstrap-grid"> 
+                <!-- New widget -->
+                <div class="powerwidget powerwidget-as-portlet-white" id="chartjsgraphs-index-2" data-widget-editbutton="false">
+                  <header>
+                    <h2>Auditory</h2>
+                  </header>
+                  <div class="inner-spacer">
+                    <div class="row">
+                      <div class="col-md-12 text-center">
+                        <canvas id="chartjs-doughnut3" height="170" width="170"></canvas>
+                        <h1 class="colossal"><i class="fa fa-female"></i>3258<i class="fa fa-caret-down"></i></h1>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                        <h3 class="margin-0px margin-top">1143</h3>
+                        <span class="label bg-orange"><strong>Male</strong> <i class="fa fa-chevron-circle-up"></i></span> </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                        <h3 class="margin-0px margin-top">5523</h3>
+                        <span class="label bg-purple"><strong>Female</strong> <i class="fa fa-chevron-circle-up"></i></span> </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6 text-center margin-bottom-20px">
+                        <h3 class="margin-0px margin-top">8943</h3>
+                        <span class="label bg-red"><strong>Aliens</strong> <i class="fa fa-chevron-circle-up"></i></span> </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6 text-center margin-bottom-20px">
+                        <h3 class="text-white margin-0px margin-top">2064</h3>
+                        <span class="label bg-pink"><strong>Predators</strong> <i class="fa fa-chevron-circle-up"></i></span> </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /New widget --> 
+              </div>
+              <!-- /Inner Row Col-md-4 -->
+              
+              <div class="col-md-4 bootstrap-grid"> 
+                <!-- New widget -->
+                <div class="powerwidget powerwidget-as-portlet-orange" id="chartjsgraphs-index-3" data-widget-editbutton="false">
+                  <header>
+                    <h2>Sales</h2>
+                  </header>
+                  <div class="inner-spacer">
+                    <div class="row">
+                      <div class="col-md-12 text-center">
+                        <canvas id="chartjs-doughnut4" height="170" width="170"></canvas>
+                        <h1 class="colossal"><i class="fa fa-android"></i>55232<i class="fa fa-caret-down"></i></h1>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                        <h3 class="text-white margin-0px margin-top">2584</h3>
+                        <span class="label bg-white"><strong>Windows</strong> <i class="fa fa-windows"></i></span> </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                        <h3 class="text-white margin-0px margin-top">1823</h3>
+                        <span class="label bg-dark-red"><strong>Android</strong> <i class="fa fa-android"></i></span> </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6 text-center margin-bottom-20px">
+                        <h3 class="text-white margin-0px margin-top">1823</h3>
+                        <span class="label bg-blue"><strong>iOS</strong> <i class="fa fa-apple"></i></span> </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6 text-center margin-bottom-20px">
+                        <h3 class="text-white margin-0px margin-top">2345</h3>
+                        <span class="label bg-cold-grey"><strong>Linux</strong> <i class="fa fa-linux"></i></span> </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /New widget --> 
+              </div>
+              <!-- /Inner Row Col-md-4 -->
+              
+              <div class="col-md-12 bootstrap-grid"> 
+                
+                <!-- New widget -->
+                <div class="powerwidget blue" id="calendar-widget-index" data-widget-editbutton="false">
+                  <header>
+                    <h2>Calendar<small>Events</small></h2>
+                  </header>
+                  <div class="inner-spacer">
+                    <div id='calendar2'></div>
+                  </div>
+                </div>
+                <!-- End Widget --> 
+                
+                <!-- New widget -->
+                <div class="powerwidget cold-grey" id="chatz-index" data-widget-editbutton="false">
+                  <header>
+                    <h2>Chat<small>Yeah!</small></h2>
+                  </header>
+                  <div class="inner-spacer">
+                    <div class="chat-container">
+                      <div class="top-buttons clearfix">
+                        <h2 class="margin-0px pull-left">Chat</h2>
+                        <span class="badge">25</span>
+                        <div class="btn-group btn-group-sm pull-right"> <a class="btn btn-default"><i class="fa fa-thumbs-down"></i> <span class="hidden-xs">Leave</span></a> <a class="btn btn-default"><i class="fa fa-times-circle"></i> <span class="hidden-xs">Clear</span></a></div>
+                      </div>
+                      <nav class="chat-users-menu"> 
+                        
+                        <!--Adding Some Scroll-->
+                        <div class="nano">
+                          <div class="nano-content">
+                            <div class="menu-header"><a class="btn btn-default chat-toggler"><i class="fa fa-user"></i> <i class="fa fa-arrow-down"></i></a></div>
+                            <ul>
+                              <li><a href="#"><span class="chat-name">Gluck Dorris</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span><span class="badge">5</span></a></li>
+                              <li><a href="#"><span class="chat-name">Anton Durant</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                              <li><a href="#"><span class="chat-name">Spiderman</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                              <li><a href="#"><span class="chat-name">Muchu</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-default">Offline</span></a></li>
+                              <li><a href="#"><span class="chat-name">Mr. Joker</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                              <li><a href="#"><span class="chat-name">Chewbacca</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                              <li><a href="#"><span class="chat-name">The Piggy</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                              <li><a href="#"><span class="chat-name">Anton Durant</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                              <li><a href="#"><span class="chat-name">Spiderman</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                              <li><a href="#"><span class="chat-name">Muchu</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                              <li><a href="#"><span class="chat-name">Anton Durant</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                              <li><a href="#"><span class="chat-name">Spiderman</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                              <li><a href="#"><span class="chat-name">Muchu</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                              <li><a href="#"><span class="chat-name">Anton Durant</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                              <li><a href="#"><span class="chat-name">Spiderman</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                              <li><a href="#"><span class="chat-name">Muchu</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                              <li><a href="#"><span class="chat-name">Anton Durant</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-default">Offline</span></a></li>
+                              <li><a href="#"><span class="chat-name">Spiderman</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                              <li><a href="#"><span class="chat-name">Muchu</span><span class="user-img"><img src="http://placehold.it/150x150" alt="User"/></span><span class="label label-success">Online</span></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                      <div class="chat-container">
+                        <div class="chat-pusher">
+                          <div class="chat-content"><!-- this is the wrapper for the content -->
+                            <div class="nano"><!-- this is the nanoscroller -->
+                              <div class="nano-content">
+                                <div class="chat-content-inner"><!-- extra div for emulating position:fixed of the menu --> 
+                                  
+                                  <!-- Top Navigation -->
+                                  
+                                  <div class="clearfix">
+                                    <div class="chat-messages chat-messages-with-sidebar">
+                                      <ul>
+                                        <li class="left clearfix">
+                                          <div class="user-img pull-left"> <img src="http://placehold.it/150x150" alt="User Avatar" /> </div>
+                                          <div class="chat-body clearfix">
+                                            <div class="header"> <span class="name">Gluck Dorris</span><span class="name"></span> <span class="badge"><i class="fa fa-clock-o"></i>14 mins ago</span></div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor nulla vitae interdum fermentum. Ut in vulputate neque. Praesent luctus lacus a dolor tempus pellentesque. Cras sit amet urna eu augue suscipit eleifend. Mauris mollis pharetra faucibus. Phasellus eu massa quam. Nunc id metus placerat neque feugiat commodo. </p>
+                                          </div>
+                                        </li>
+                                        <li class="right clearfix"><span class="user-img pull-right"> <img src="http://placehold.it/150x150" alt="User Avatar" /> </span>
+                                          <div class="chat-body clearfix">
+                                            <div class="header"> <span class="name">Anton Durant</span><span class=" badge"><i class="fa fa-clock-o"></i>13 mins ago</span> </div>
+                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                              dolor, quis ullamcorper ligula sodales. </p>
+                                          </div>
+                                        </li>
+                                        <li class="left clearfix"><span class="user-img pull-left"> <img src="http://placehold.it/150x150" alt="User Avatar" class="img-circle" /> </span>
+                                          <div class="chat-body clearfix">
+                                            <div class="header"> <span class="name">Spiderman</span> <span class="badge"><i class="fa fa-clock-o"></i>14 mins ago</span> </div>
+                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                              dolor, quis ullamcorper ligula sodales. </p>
+                                          </div>
+                                        </li>
+                                        <li class="right clearfix"><span class="user-img pull-right"> <img src="http://placehold.it/150x150" alt="User Avatar" class="img-circle" /> </span>
+                                          <div class="chat-body clearfix">
+                                            <div class="header"><span class="name">Muchu</span><small class="badge"><i class="fa fa-clock-o"></i>15 mins ago</small></div>
+                                            <p>Nunc ipsum dui, tempus id sagittis eu, rutrum ac libero. Morbi non enim a tortor pulvinar feugiat at consectetur nunc. Curabitur pulvinar tincidunt nisi id bibendum. Nulla ut diam iaculis, venenatis velit hendrerit, fringilla arcu. Mauris accumsan pulvinar augue, non blandit justo vestibulum a. Proin non eros semper, accumsan nisl in, imperdiet justo. Pellentesque convallis commodo porttitor. Nam feugiat dignissim felis sed tempor. Sed pretium eros nec mi semper aliquam. Phasellus eget accumsan felis. Nulla varius risus quis dapibus porta. Donec vel magna viverra, semper velit eu, adipiscing arcu. Integer sollicitudin elementum est eget ullamcorper. Mauris eget sollicitudin erat. Nullam et lacinia nibh, a aliquam nunc. Curabitur ullamcorper metus ac purus commodo, sit amet mattis arcu mollis. </p>
+                                          </div>
+                                        </li>
+                                        <li class="left clearfix"><span class="user-img pull-left"> <img src="http://placehold.it/150x150" alt="User Avatar" class="img-circle" /> </span>
+                                          <div class="chat-body clearfix">
+                                            <div class="header"> <span class="name">Gluck Dorris</span> <span class="badge"><i class="fa fa-clock-o"></i>14 mins ago</span></div>
+                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                              dolor, quis ullamcorper ligula sodales. </p>
+                                          </div>
+                                        </li>
+                                        <li class="right clearfix"><span class="user-img pull-right"> <img src="http://placehold.it/150x150" alt="User Avatar" class="img-circle" /> </span>
+                                          <div class="chat-body clearfix">
+                                            <div class="header"> <span class="name">Anton Durant</span><span class=" badge"><i class="fa fa-clock-o"></i>13 mins ago</span> </div>
+                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                              dolor, quis ullamcorper ligula sodales. </p>
+                                          </div>
+                                        </li>
+                                        <li class="left clearfix"><span class="user-img pull-left"> <img src="http://placehold.it/150x150" alt="User Avatar" class="img-circle" /> </span>
+                                          <div class="chat-body clearfix">
+                                            <div class="header"> <span class="name">Spiderman</span> <span class="badge"><i class="fa fa-clock-o"></i>14 mins ago</span> </div>
+                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                              dolor, quis ullamcorper ligula sodales. </p>
+                                          </div>
+                                        </li>
+                                        <li class="right clearfix"><span class="user-img pull-right"> <img src="http://placehold.it/150x150" alt="User Avatar" class="img-circle" /> </span>
+                                          <div class="chat-body clearfix">
+                                            <div class="header"> <span class="name">Spiderman</span> <span class="badge"><i class="fa fa-clock-o"></i>14 mins ago</span></div>
+                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                              dolor, quis ullamcorper ligula sodales. </p>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                                <!-- /chat-content-inner --> 
+                              </div>
+                            </div>
+                            
+                            <!-- /nano --> 
+                            
+                          </div>
+                          
+                          <!-- /chat-content --> 
+                        </div>
+                        <!-- /chat-pusher --> 
+                      </div>
+                    </div>
+                    <!-- /chat-container--> 
+                    <!--Chat-form -->
+                    <div class="chat-message-form">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <textarea placeholder="Write Your Message Here" class="form-control margin-bottom" rows="2"></textarea>
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-8">
+                          <div class="btn-group">
+                            <button class=" btn btn-default"><i class="fa fa-location-arrow"></i></button>
+                            <button class=" btn btn-default"><i class="fa fa-camera"></i></button>
+                            <button class=" btn btn-default"><i class="fa fa-music"></i></button>
+                            <button class=" btn btn-default"><i class="fa fa-file"></i></button>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                          <button class="btn btn-info pull-right" type="button">Chat!</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- /Chat-form --> 
+                    
+                  </div>
+                </div>
+                <!-- End Widget --> 
+                
+              </div>
+              <!-- /Inner Row Col-md-12 --> 
             </div>
-            <div class="modal-body">
-              <p>ORB &#8212 Power Admin Template. Here is the example of modal body.</p>
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
-            </div>
+            <!-- /Widgets Row End Grid--> 
           </div>
-        </div>
-      </div>
-      <div class="highlight">
-        <pre class="prettyprint linenums">&lt;!-- The button --&gt;
-&lt;a href=&quot;#myModal1&quot; role=&quot;button&quot; class=&quot;btn&quot; data-toggle=&quot;modal&quot;&gt;Button Label&lt;/a&gt;
-&lt;!-- The modal --&gt;
-&lt;div id=&quot;myModal1&quot; class=&quot;modal&quot; data-easein=&quot;fadeInLeft&quot; data-easeout=&quot;fadeOutLeft&quot;
-tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
-	&lt;div class=&quot;modal-dialog&quot;&gt;
-	&lt;div class=&quot;modal-content&quot;&gt;
-		&lt;div class=&quot;modal-header&quot;&gt;
-		  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&times;&lt;/button&gt;
-		  &lt;h3 id=&quot;myModalLabel&quot;&gt;Modal header 1&lt;/h3&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;modal-body&quot;&gt;
-		  &lt;p&gt;One fine body&hellip;&lt;/p&gt;
-		&lt;/div&gt;
-		&lt;div class=&quot;modal-footer&quot;&gt;
-		  &lt;button class=&quot;btn&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;Close&lt;/button&gt;
-		  &lt;button class=&quot;btn btn-primary&quot;&gt;Save changes&lt;/button&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</pre>
-      </div>
+      <!-- / Content Wrapper --> 
     </div>
-    <div class="callout callout-danger"> Please note that we have to disable default BS modal fade behaviour to animation work. So, do not add <code>fade</code> class to modal.</div>
-    <p>The main lesson you should learn from example above is data-attributes <code>data-easein="fadeInLeft"</code> and <code>data-easeout="fadeOutLeft"</code>, which are incoming and outgoing animations. The list of predefined and balanced modal animations you can found <a href="../admin-animation.html">here</a>. To experiment you can create your own animations pair using transitions in <code>animate.css</code></p>
-    <p><code>animation.js</code> also extend default Bootstrap Popover behaviour to make possible to add animations to that kind of elements.</p>
-    <div class="example"> <a title="Popover on right" data-animation="false" data-easein="flipInX" href="#" class="btn btn-success margin-bottom-20px" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">flipInX</a>
-      <div class="highlight">
-        <pre class="prettyprint linenums">
-&lt;a title="Popover on left" data-animation="false" data-easein="flipInX" href="#" class="btn btn-success" 
-rel="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."&gt;flipInX&lt;/a&gt;</pre>
-      </div>
-    </div>
-    <div class="callout callout-danger"> Please note we've to include the <code>data-animation="false"</code> to disable the default fade animation in Bootstrap Popovers. </div>
-    <div class="page-header">
-      <h1 id="forms">ORB Forms</h1>
-    </div>
-    <p>ORB offers a set of beautiful form elements with large amount of javascript features: validation, masking, modals, ajax submit, datepickers. It allows you to create forms of any complexity and for any needs: login, registration, contacts, review, order, comment, checkout, etc.</p>
-    <h3>HTML Structure</h3>
-    <p>The main HTML structure of the form consists of fieldset, legend, footer and sections. Each section contains label, form element and optional note. Here is the basic structure of registration form.</p>
-    <div class="example">
-      <form action="" class="orb-form margin-bottom-10px">
-        <header>Registration form</header>
-        <fieldset>
-          <section>
-            <label class="input"> <i class="icon-append fa fa-user"></i>
-              <input type="text" name="username" placeholder="Username">
-            </label>
-          </section>
-          <section>
-            <label class="input"> <i class="icon-append fa fa-envelope-o"></i>
-              <input type="text" name="email" placeholder="Email address">
-            </label>
-          </section>
-          <section>
-            <label class="input"> <i class="icon-append fa fa-lock"></i>
-              <input type="password" name="password" placeholder="Password">
-            </label>
-          </section>
-          <section>
-            <label class="input"> <i class="icon-append fa fa-lock"></i>
-              <input type="password" name="passwordConfirm" placeholder="Confirm password">
-            </label>
-          </section>
-          <fieldset>
-          </fieldset>
-          <div class="row">
-            <section class="col col-6">
-              <label class="input">
-                <input type="text" name="firstmane" placeholder="First name">
-              </label>
-            </section>
-            <section class="col col-6">
-              <label class="input">
-                <input type="text" name="lastname" placeholder="Last name">
-              </label>
-            </section>
-          </div>
-          <section>
-            <label class="select">
-              <select name="gender">
-                <option value="0" selected disabled>Gender</option>
-                <option value="1">Male</option>
-                <option value="2">Female</option>
-                <option value="3">Other</option>
-              </select>
-              <i></i> </label>
-          </section>
-          <section>
-            <label class="checkbox">
-              <input type="checkbox" name="subscription" id="subscription">
-            <i></i>I want to receive news and  special offers</label>
-            <label class="checkbox">
-              <input type="checkbox" name="terms" id="terms">
-            <i></i>I agree with the Terms and Conditions</label>
-          </section>
-        </fieldset>
-        <footer>
-          <button type="submit" class="btn btn-danger">Submit</button>
-        </footer>
-      </form>
-      <div class="highlight">
-        <pre class="prettyprint linenums">
-&lt;form action="" class="orb-form"&gt;
-  &lt;header&gt;Registration form&lt;/header&gt;
-  &lt;fieldset&gt;
-    &lt;section&gt;
-      &lt;label class="input"&gt; &lt;i class="icon-append fa fa-user"&gt;&lt;/i&gt;
-        &lt;input type="text" name="username" placeholder="Username"&gt;
-      &lt;/label&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-      &lt;label class="input"&gt; &lt;i class="icon-append fa fa-envelope-o"&gt;&lt;/i&gt;
-        &lt;input type="text" name="email" placeholder="Email address"&gt;
-      &lt;/label&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-      &lt;label class="input"&gt; &lt;i class="icon-append fa fa-lock"&gt;&lt;/i&gt;
-        &lt;input type="password" name="password" placeholder="Password"&gt;
-      &lt;/label&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-      &lt;label class="input"&gt; &lt;i class="icon-append fa fa-lock"&gt;&lt;/i&gt;
-        &lt;input type="password" name="passwordConfirm" placeholder="Confirm password"&gt;
-      &lt;/label&gt;
-    &lt;/section&gt;
-    &lt;fieldset&gt;
-    &lt;/fieldset&gt;
-    &lt;div class="row"&gt;
-      &lt;section class="col col-6"&gt;
-        &lt;label class="input"&gt;
-          &lt;input type="text" name="firstmane" placeholder="First name"&gt;
-        &lt;/label&gt;
-      &lt;/section&gt;
-      &lt;section class="col col-6"&gt;
-        &lt;label class="input"&gt;
-          &lt;input type="text" name="lastname" placeholder="Last name"&gt;
-        &lt;/label&gt;
-      &lt;/section&gt;
-    &lt;/div&gt;
-    &lt;section&gt;
-      &lt;label class="select"&gt;
-        &lt;select name="gender"&gt;
-          &lt;option value="0" selected disabled&gt;Gender&lt;/option&gt;
-          &lt;option value="1"&gt;Male&lt;/option&gt;
-          &lt;option value="2"&gt;Female&lt;/option&gt;
-          &lt;option value="3"&gt;Other&lt;/option&gt;
-        &lt;/select&gt;
-        &lt;i&gt;&lt;/i&gt; &lt;/label&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-      &lt;label class="checkbox"&gt;
-        &lt;input type="checkbox" name="subscription" id="subscription"&gt;
-        &lt;i&gt;&lt;/i&gt;I want to receive news and  special offers&lt;/label&gt;
-      &lt;label class="checkbox"&gt;
-        &lt;input type="checkbox" name="terms" id="terms"&gt;
-        &lt;i&gt;&lt;/i&gt;I agree with the Terms and Conditions&lt;/label&gt;
-    &lt;/section&gt;
-  &lt;/fieldset&gt;
-  &lt;footer&gt;
-    &lt;button type="submit" class="btn btn-danger"&gt;Submit&lt;/button&gt;
-  &lt;/footer&gt;
-&lt;/form&gt;
-</pre>
-      </div>
-    </div>
-    <h3>Icons</h3>
-    <p>ORB uses 3 set of icons &#8212; <a href="../admin-font-glyphicons.html">Glyphicons</a>, <a href="../admin-font-awesome.html">FontAwesome</a>, <a href="../admin-font-entypo.html">Entypo</a>. Each set has almost the same markup format. For example, to use one of Font Awesome Icons you need to add tag with 3 classes. First class defines icon position: icon-append or icon-prepend. Other classes define appearance of the icon. For example, if we need appended user icon we get the following markup:</p>
-    <pre class="prettyprint linenums">
-&lt;section&gt;
-  &lt;label class="input"&gt; &lt;i class="icon-append fa fa-user"&gt;&lt;/i&gt;
-    &lt;input type="text"&gt;
-  &lt;/label&gt;
-&lt;/section&gt;</pre>
-    <h3>Placeholders</h3>
-    <p>You can use placeholders for inputs and textareas. Just specify placeholder attribute like in demo below.</p>
-    <pre class="prettyprint linenums">
-&lt;section&gt;
-  &lt;label class="input"&gt;
-    &lt;input type="text" placeholder="Placeholder text"&gt;
-  &lt;/label&gt;
-&lt;/section&gt;
-&lt;section&gt;
-  &lt;label class="textarea"&gt;
-    &lt;textarea rows="3" placeholder="Placeholder text"&gt;&lt;/textarea&gt;
-  &lt;/label&gt;
-&lt;/section&gt;
-</pre>
-    <p>Also there is a possibility to add placeholder for select element. To do that we need to disable first element.</p>
-    <pre class="prettyprint linenums">
-&lt;section&gt;
-  &lt;label class="select"&gt;
-    &lt;select&gt;
-      &lt;option value="0" selected disabled&gt;Gender&lt;/option&gt;
-      &lt;option value="1"&gt;Male&lt;/option&gt;
-      &lt;option value="2"&gt;Female&lt;/option&gt;
-      &lt;option value="3"&gt;Other&lt;/option&gt;
-    &lt;/select&gt;
-    &lt;i&gt;&lt;/i&gt; &lt;/label&gt;
-&lt;/section&gt;
-</pre>
-    <h3>Elements States</h3>
-    <p>Like in Bootstrap, Each element of ORB Forms has 3 additional states: error, success and disabled. To use one of them just add state-error, state-success or state-disabled class to element container.</p>
-    <pre class="prettyprint linenums">
-&lt;section&gt;
-  &lt;label class="input state-error"&gt;
-    &lt;input type="text"&gt;
-  &lt;/label&gt;
-&lt;/section&gt;
-&lt;section&gt;
-  &lt;label class="textarea state-success"&gt;
-    &lt;textarea rows="3" placeholder="Placeholder text"&gt;&lt;/textarea&gt;
-  &lt;/label&gt;
-&lt;/section&gt;
-</pre>
-    <p>When using disabled state don't forget to add disabled attribute to form element.</p>
-    <pre class="prettyprint linenums">
-&lt;section&gt;
-  &lt;label class="input state-error"&gt;
-    &lt;input type="text" disabled&gt;
-  &lt;/label&gt;
-&lt;/section&gt;
-</pre>
-    <h3>Client Side Validation and Masking</h3>
-    <p>As we stated before in Javascript section we use jQuery plugin <code>jquery.maskedinput.min.js</code> for masked input and <code>jquery.validate.min.js</code> for form validation. Back-end for both plugins in <code>scripts.js</code> you can find under the <strong>Forms Chapter</strong></p>
-    <div class="callout callout-info"> Don't forget that we include 3 PHP Ecample Files for Server Side Form Processing &#8212; <code>demo-checkout-process.php</code>, <code>demo-order-process.php</code> and <code>demo-review-process.php</code>. To see them in action please visit that <a href="../admin-forms-validation.html">demo page</a>. </div>
-
-
-    <div class="page-header">
-      <h1 id="megamenu">MegaMenu</h1>
-    </div>
-    <p>Since version 1.1 ORB is bundled with <a href="../admin-megamenu.html">MegaMenu</a>, that allows you to create very complex menus with tons of elements inside like &#8212; Maps, Images, Videos, different kinds of lists, forms and more. MegaMenu is totally built on Bootstrap and use common BS dropdown behaviour, when dropdowns open by clicking on main links of the menu. The main thing you should know about MegaMenu that you can override that Bootstrap behaviour &#8212; and open dropdowns on mouse hover events. You should do the following two steps:</p>
-    <ol>
-    <li>Include <code>bootstrap-hover-dropdown.js</code> file right afrer Bootstrap core JavaScript</li>
-    <li>Initialize hover-dropdown using Java Script below</li>
-    </ol>
-    <pre class="prettyprint linenums">$('.dropdown-toggle').dropdownHover().dropdown();
-$(document).on('click', '.orbmm .dropdown-menu', function(e) {
-e.stopPropagation()</pre>
-
-<div class="callout callout-warning">
-We want to warn you from using dropdown on mouse hover in MegaMenu. There are two reasons of this warning. First of all &#8212; usability reason. Mouse hover effects involve "pulling" and "jerking" of content inside menu, especially on small devices. The second one &#8212; is technical reason. Some kind of contents inside require extra milliseconds to be rendered (not loaded). This is especially important if you load cross-site includes like iframes with videos or maps.
+    <!--/MainWrapper-->
 </div>
+<!--/Smooth Scroll--> 
+<!--Modals--> 
 
-
-    <div class="page-header">
-      <h1 id="versionhistory">Version History</h1>
+<!--Power Widgets Modal-->
+<div class="modal" id="delete-widget">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <i class="fa fa-lock"></i> </div>
+      <div class="modal-body text-center">
+        <p>Are you sure to delete this widget?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="trigger-deletewidget-reset">Cancel</button>
+        <button type="button" class="btn btn-primary" id="trigger-deletewidget">Delete</button>
+      </div>
     </div>
-    <p>23.05.2014 &#8212; Version 1.1</p>
-    <ol>
-    <li>ORB is now bundled with <a href="../admin-megamenu.html">Horizontal MegaMenu</a></li>
-    <li>All Google Maps Instances is now using <a href="https://github.com/marioestrada/jQuery-gMap">gMap plugin</a>. That means that <code>scripts.js</code> is now has rewrited Google Maps chapter. The main thing you should remember that Google Maps is now initialized via <code>.map-container</code> class.</li>
-    <li>Minor CSS Bugs Fixed (Totally enchanced left-menu hover behaviour at medium size devices).</li>
-    <li>Minor JavaScript Bugs Fixed</li>
-    <li>Fixed PowerWidget Controls Touch Events on Mobile Devices</li>
-    </ol>
-    <p>23.05.2014 &#8212; Initial Release</p>
- 
-
-
-    <div class="page-header">
-      <h1 id="support">Support</h1>
-    </div>
-    <p>We'll update ORB till the end of the time. As a respected buyer you'll get unlimited updates with bugfixes and new features for free forever.</p>
-    <p>Have answers, comment, bug reports &#8212; connect me <a href="http://themeforest.net/user/DazeinCreative">via form</a>. (You should be logged to Themeforest)</p>
+    <!-- /.modal-content --> 
   </div>
-  <!--/Bottom Block--> 
+  <!-- /.modal-dialog --> 
 </div>
-<script type="text/javascript" src="../js/vendors/jquery/jquery.min.js"></script> 
-<script type="text/javascript" src="../js/vendors/jquery/jquery-ui.min.js"></script> 
-<script type="text/javascript" src="../js/vendors/powerwidgets/powerwidgets.min.js"></script> 
-<script type="text/javascript" src="js/prettify.js"></script> 
+<!-- /.modal --> 
+
+<!--Sign Out Dialog Modal-->
+<div class="modal" id="signout">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <i class="fa fa-lock"></i> </div>
+      <div class="modal-body text-center">Are You Sure Want To Sign Out?</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" id="yesigo">Ok</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+    <!-- /.modal-content --> 
+  </div>
+  <!-- /.modal-dialog --> 
+</div>
+<!-- /.modal --> 
+
+<!--Lock Screen Dialog Modal-->
+<div class="modal" id="lockscreen">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <i class="fa fa-lock"></i> </div>
+      <div class="modal-body text-center">Are You Sure Want To Lock Screen?</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" id="yesilock">Ok</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+    <!-- /.modal-content --> 
+  </div>
+  <!-- /.modal-dialog --> 
+</div>
+<!-- /.modal --> 
+
+<!--Scripts--> 
+<!--JQuery--> 
+<script type="text/javascript" src="js/vendors/jquery/jquery.min.js"></script> 
+<script type="text/javascript" src="js/vendors/jquery/jquery-ui.min.js"></script> 
+
 <script>
-  !function ($) {
-    $(function(){
-      window.prettyPrint && prettyPrint()   
-    })
-  }(window.jQuery)
-</script> 
-<script type="text/javascript" src="../js/vendors/bootstrap/bootstrap.min.js"></script> 
-<script type="text/javascript" src="../js/vendors/animation/animation.js"></script> 
-<script type="text/javascript" src="../js/scripts.js"></script>
+$('.powerwidget > header').on('touchstart', function(event){});
+</script>
+
+<!--EasyPieChart--> 
+<script type="text/javascript" src="js/vendors/easing/jquery.easing.1.3.min.js"></script> 
+<script type="text/javascript" src="js/vendors/easypie/jquery.easypiechart.min.js"></script> 
+
+<!--Fullscreen--> 
+<script type="text/javascript" src="js/vendors/fullscreen/screenfull.min.js"></script> 
+
+<!--NanoScroller--> 
+<script type="text/javascript" src="js/vendors/nanoscroller/jquery.nanoscroller.min.js"></script> 
+
+<!--Sparkline--> 
+<script type="text/javascript" src="js/vendors/sparkline/jquery.sparkline.min.js"></script> 
+
+<!--Horizontal Dropdown--> 
+<script type="text/javascript" src="js/vendors/horisontal/cbpHorizontalSlideOutMenu.js"></script> 
+<script type="text/javascript" src="js/vendors/classie/classie.js"></script> 
+
+<!--PowerWidgets--> 
+<script type="text/javascript" src="js/vendors/powerwidgets/powerwidgets.min.js"></script> 
+
+<!--Morris Chart--> 
+<script type="text/javascript" src="js/vendors/raphael/raphael-min.js"></script> 
+<script type="text/javascript" src="js/vendors/morris/morris.min.js"></script> 
+
+<!--FlotChart--> 
+<script type="text/javascript" src="js/vendors/flotchart/jquery.flot.min.js"></script> 
+<script type="text/javascript" src="js/vendors/flotchart/jquery.flot.resize.min.js"></script> 
+<script type="text/javascript" src="js/vendors/flotchart/jquery.flot.axislabels.js"></script> 
+
+<!--Chart.js--> 
+<script type="text/javascript" src="js/vendors/chartjs/chart.min.js"></script> 
+
+<!--Calendar--> 
+<script type="text/javascript" src="js/vendors/fullcalendar/fullcalendar.min.js"></script> 
+<script type="text/javascript" src="js/vendors/fullcalendar/gcal.js"></script> 
+
+<!--Bootstrap--> 
+<script type="text/javascript" src="js/vendors/bootstrap/bootstrap.min.js"></script> 
+
+<!--Vector Map--> 
+<script type="text/javascript" src="js/vendors/vector-map/jquery.vmap.min.js"></script> 
+<script type="text/javascript" src="js/vendors/vector-map/jquery.vmap.sampledata.js"></script> 
+<script type="text/javascript" src="js/vendors/vector-map/jquery.vmap.world.js"></script> 
+
+<!--ToDo--> 
+<script type="text/javascript" src="js/vendors/todos/todos.js"></script> 
+
+<!--Main App--> 
+<script type="text/javascript" src="js/scripts.js"></script>
+
+
+
+<!--/Scripts-->
+
 </body>
 </html>
