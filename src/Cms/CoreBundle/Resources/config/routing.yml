@@ -1,0 +1,21 @@
+# Dashboard Page
+core_dashboard:
+    path:     /
+    defaults: { _controller: CmsCoreBundle:Dashboard:index }
+
+# Authentication Process
+core_auth_login:
+    path:     /auth/login
+    defaults: { _controller: CmsCoreBundle:Auth:login }
+
+core_auth_check:
+    path:     /auth/check
+    defaults: { _controller: CmsCoreBundle:Auth:check }
+
+core_auth_logout:
+    path:     /auth/logout
+    defaults: { _controller: CmsCoreBundle:Auth:logout }
+
+core_auth_forget_password:
+    path:     /auth/forget-password
+    defaults: { _controller: CmsCoreBundle:Auth:forgetPassword } 

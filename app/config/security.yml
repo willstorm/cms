@@ -1,0 +1,30 @@
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    providers:
+        in_memory:
+            memory:
+                users:
+                    user:  { password: userpass, roles: [ 'ROLE_USER' ] }
+                    admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+
+    firewalls:
+        core_login:
+            pattern:  ^/admin/auth/(login|forget-password)$
+            security: false
+
+        core_secured:
+            pattern:    ^/admin
+            form_login:
+                check_path: core_auth_check
+                login_path: core_auth_login
+                username_parameter: email
+                password_parameter: password
+            logout:
+                path:   core_auth_logout
+                target: core_auth_login

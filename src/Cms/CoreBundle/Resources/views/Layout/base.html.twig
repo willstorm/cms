@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block metas %}{% endblock %}
+    <title>{% block title %}{% endblock %} | CMS</title>
+    <link href="{{ asset('bundles/cmscore/css/styles.css') }}" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('bundles/cmscore/favicon.ico') }}" />
+    {% block stylesheets %}{% endblock %}
+    <script type="text/javascript" src="{{ asset('bundles/cmscore/js/vendors/horisontal/modernizr.custom.js') }}"></script>
+</head>
+
+<body>
+    <div class="colorful-page-wrapper">
+        {% block content %}{% endblock %}        
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="{{ asset('bundles/cmscore/js/vendors/jquery/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/cmscore/js/vendors/jquery/jquery-ui.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/cmscore/js/vendors/forms/jquery.form.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/cmscore/js/vendors/forms/jquery.validate.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/cmscore/js/vendors/forms/jquery.maskedinput.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/cmscore/js/vendors/jquery-steps/jquery.steps.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/cmscore/js/vendors/nanoscroller/jquery.nanoscroller.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/cmscore/js/vendors/sparkline/jquery.sparkline.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/cmscore/js/scripts.js') }}"></script>
+{% block javascripts %}{% endblock %}
+<!-- Scripts -->
+</body>
+</html>
