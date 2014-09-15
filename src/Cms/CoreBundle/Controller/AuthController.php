@@ -63,12 +63,22 @@ class AuthController extends Controller
     {
         try {
             if($request->isMethod('POST')) {
-                if(!$email = $request->get('email')) {
+                if(!$email = trim($request->get('email'))) {
                     throw new Exception('Digite um e-mail válido.');
                 }
-
-                // @TODO Verificação do e-mail e envio do token para troca de senha
-                throw new Exception('Nenhum e-mail encontrado.');
+                
+                $user = $this->getDoctrine()
+                    ->getRepository('CmsCoreBundle:User')
+                    ->findOneBy(array('email' => $email));
+                
+                if($user) {                
+                    // @TODO Sent an email to client                                    
+                }
+                
+                $request->getSession()
+                    ->getFlashBag()
+                    ->add('success', 'Caso seja um usuário válido, um e-mail foi enviado com instruções para recuperação da senha.');
+                
             }
         } catch(Exception $e) {
             $request->getSession()
