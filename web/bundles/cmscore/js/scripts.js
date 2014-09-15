@@ -3040,8 +3040,8 @@
                 // Rules for form validation
                 rules: {
                     email: {
-               //         required: true,
-                        // email: true
+                        required: true,
+                        email: true
                     },
                     password: {
                         required: true,

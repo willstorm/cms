@@ -1,16 +1,16 @@
 {% extends 'CmsCoreBundle:Layout:login.html.twig' %}
-{% block title 'Login' %}
+{% block title 'Identificação' %}
 {% block content %}
 <div class="center-block">
     <div class="login-block">
         <form action="{{ path('core_auth_check') }}" id="login-form" class="orb-form" method="post">
             <header>
                 <div class="image-block"><img src="{{ asset('bundles/cmscore/images/logo.png') }}" alt="User" /></div>
-                Área Restrita
+                Identificação
             </header>
-                {% if error.message is defined %}
-                    {{ error.message }}
-                {% endif %}
+
+            {% include 'CmsCoreBundle:Layout:message.html.twig' %}
+
             <fieldset>
                 <section>
                     <div class="row">

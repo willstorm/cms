@@ -28,7 +28,7 @@ class __TwigTemplate_f64c65fe348d9e03b83e780943b68e6ac307d999275e674a5f52fbdd9cb
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        echo "Login";
+        echo "Identificação";
     }
 
     // line 3
@@ -46,19 +46,15 @@ class __TwigTemplate_f64c65fe348d9e03b83e780943b68e6ac307d999275e674a5f52fbdd9cb
         // line 8
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/cmscore/images/logo.png"), "html", null, true);
         echo "\" alt=\"User\" /></div>
-                Área Restrita
+                Identificação
             </header>
-                ";
-        // line 11
-        if ($this->getAttribute((isset($context["error"]) ? $context["error"] : null), "message", array(), "any", true, true)) {
-            // line 12
-            echo "                    ";
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["error"]) ? $context["error"] : $this->getContext($context, "error")), "message"), "html", null, true);
-            echo "
-                ";
-        }
-        // line 14
-        echo "            <fieldset>
+
+            ";
+        // line 12
+        $this->env->loadTemplate("CmsCoreBundle:Layout:message.html.twig")->display($context);
+        // line 13
+        echo "
+            <fieldset>
                 <section>
                     <div class=\"row\">
                         <label class=\"label col col-4\">E-mail</label>
@@ -123,6 +119,6 @@ class __TwigTemplate_f64c65fe348d9e03b83e780943b68e6ac307d999275e674a5f52fbdd9cb
 
     public function getDebugInfo()
     {
-        return array (  88 => 32,  69 => 20,  61 => 14,  55 => 12,  53 => 11,  47 => 8,  42 => 6,  38 => 4,  35 => 3,  29 => 2,);
+        return array (  84 => 32,  65 => 20,  56 => 13,  54 => 12,  47 => 8,  42 => 6,  38 => 4,  35 => 3,  29 => 2,);
     }
 }
