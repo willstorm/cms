@@ -19,7 +19,7 @@ security:
             security: false
 
         core_secured:
-            pattern:    ^/admin
+            pattern:  ^/admin
             form_login:
                 check_path: core_auth_check
                 login_path: core_auth_login

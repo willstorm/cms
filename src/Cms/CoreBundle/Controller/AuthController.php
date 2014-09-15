@@ -26,8 +26,8 @@ class AuthController extends Controller
         } else {
             $error = $request->getSession()->get(SecurityContext::AUTHENTICATION_ERROR);
         }
-
-        if($message = $error->getMessage()) {
+        
+        if($error && ($message = $error->getMessage())) {
             $request->getSession()
                 ->getFlashBag()
                 ->add('danger', 'E-mail e/ou senha incorretos. Por favor, tente novamente.');
