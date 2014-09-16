@@ -3,6 +3,7 @@
 namespace Cms\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\AdvancedUserInterface;
 
 /**
  * User
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="user", indexes={@ORM\Index(name="fk_user_role_idx", columns={"role_id"})})
  * @ORM\Entity
  */
-class User
+class User implements AdvancedUserInterface, \Serializable
 {
     /**
      * @var string
@@ -184,5 +185,106 @@ class User
     public function getRole()
     {
         return $this->role;
+    }
+    
+    /**
+     * 
+     * @return string
+     */
+    public function getUsername() 
+    {
+        return $this->name;
+    }
+    
+    /**
+     * 
+     * @return null
+     */
+    public function getSalt()
+    {
+        return null;
+    }
+    
+    /**
+     * 
+     * @return array
+     */
+    public function getRoles()
+    {
+        return array($this->getRole()->getName());
+    }    
+    
+    /**
+     * 
+     * @return \Cms\CoreBundle\Entity\User
+     */
+    public function eraseCredentials()
+    {
+        return $this;
+    }
+    
+    /**
+     * 
+     * @return string
+     */
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->email,            
+            $this->password
+        ));
+    }
+    
+    /**
+     * 
+     * @param string $serialized
+     * @return \Cms\CoreBundle\Entity\User
+     */
+    public function unserialize($serialized)
+    {
+        list(
+            $this->id,
+            $this->email,
+            $this->password
+        ) = unserialize($serialized);
+        
+        return $this;
+    }
+    
+    /**
+     * 
+     * @return boolean
+     */
+    public function isAccountNonExpired()
+    {
+        return true;
+    }
+    
+    /**
+     * 
+     * @return boolean
+     */
+    public function isAccountNonLocked()
+    {
+        return true;
+    }
+
+    /**
+     * 
+     * @return boolean
+     */
+    public function isCredentialsNonExpired()
+    {
+        return true;
+    }
+    
+    /**
+     * 
+     * @return boolean
+     */
+    public function isEnabled()
+    {
+        return (bool) $this->active;
     }
 }
