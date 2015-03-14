@@ -5,9 +5,30 @@ use Cms\CoreBundle\Entity\Role;
 use Cms\CoreBundle\Entity\User;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class LoadData implements FixtureInterface
+/**
+ * Class LoadData
+ * @package Cms\CoreBundle\DataFixtures\ORM
+ */
+class LoadData implements FixtureInterface, ContainerAwareInterface
 {
+    protected $_container;
+
+    /**
+     * @param ContainerInterface $container
+     * @return $this
+     */
+    public function setContainer(ContainerInterface $container = null)
+    {
+        $this->_container = $container;
+        return $this;
+    }
+
+    /**
+     * @param ObjectManager $manager
+     */
     public function load(ObjectManager $manager)
     {
         $role = new Role();

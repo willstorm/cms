@@ -13,6 +13,7 @@ use Symfony\Component\Security\Core\User\AdvancedUserInterface;
  */
 class User implements AdvancedUserInterface, \Serializable
 {
+
     /**
      * @var string
      *
@@ -117,7 +118,6 @@ class User implements AdvancedUserInterface, \Serializable
     public function setPassword($password)
     {
         $this->password = sha1($password);
-
         return $this;
     }
 
